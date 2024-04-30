@@ -18,7 +18,7 @@ const Home = () => {
       cities: ["New York", "Los Angeles", "Chicago", "Houston"],
     },
     {
-      bgImage: "/assets/images/banner-1.png",
+      bgImage: "/assets/images/banner-2.png",
       title: "Start Your Home Journey Today.",
       description:
         "With The Most Complete Source Of Homes For Sale & Properties Near You.",
