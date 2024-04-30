@@ -1,0 +1,109 @@
+.full-page-vertical-slider {
+  height: 100vh;
+  width: 100%;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide-content {
+  max-width: 1200px;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+
+  border-radius: 10px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search-box input,
+.search-box select {
+  padding: 11px;
+  font-size: 16px;
+  border: none;
+  border-radius: 0px;
+  margin: 0px 0px;
+}
+
+.search-box input {
+  flex-grow: 1;
+  max-width: 461px;
+  height: 45px;
+}
+
+.search-box select {
+  padding: 11px 10px 10px 47px !important;
+  font-size: 16px;
+  border: none;
+  border-radius: 0px;
+  margin: 0px 0px;
+}
+
+.search-box input {
+  flex-grow: 1;
+  max-width: 461px;
+  height: 44px;
+  margin-left: -25px;
+}
+
+button.serch-btn-home {
+  background-color: #cd842f;
+  height: 44px;
+  border: none;
+  width: 16%;
+  color: var(--white, #fff);
+  text-align: center;
+  font-family: "Nexa-Bold", sans-serif;
+  font-size: 14.229px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+@media (min-width: 960px) {
+  .carousel .control-dots {
+    bottom: 254px !important;
+    position: absolute;
+    margin: 10px 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    left: 43%;
+    rotate: 90deg !important;
+  }
+
+  .search-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+    flex-direction: row-reverse;
+    gap: 0px !important;
+    width: 913px;
+  }
+}
+img.city-map-icon {
+  height: 24px !important;
+  float: right;
+  position: relative;
+  left: -153px;
+  top: 10px;
+  width: 24px !important;
+}
+.slide-content h2 {
+}
