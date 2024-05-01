@@ -7,6 +7,10 @@ import OurupcomingLaunch from "./OurupcomingLaunch";
 import Topbrandpartners from "./Topbrandpartners";
 import ProjectReviewslider from "./ProjectReviewslider";
 import PropertyInformation from "./PropertyInformation";
+import TestimonialSlider from "./TestimonialSlider";
+import Newsblogs from "./Newsblogs";
+import GetinTouchForm from "./GetinTouchForm";
+import DownloadappSection from "./DownloadappSection";
 
 const Home = () => {
   const slides = [
@@ -36,6 +40,10 @@ const Home = () => {
       <Topbrandpartners />
       <ProjectReviewslider />
       <PropertyInformation />
+      <TestimonialSlider />
+      <Newsblogs />
+      <GetinTouchForm />
+      <DownloadappSection />
     </div>
   );
 };

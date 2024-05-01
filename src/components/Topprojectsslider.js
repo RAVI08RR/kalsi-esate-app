@@ -95,7 +95,7 @@ const Topprojectsslider = () => {
                       src="/assets/images/bath.svg"
                       className="amenties-icons"
                     />
-                    Bath 3
+                    610-969 sqft
                   </li>
                 </ul>
               </div>
@@ -135,7 +135,7 @@ const Topprojectsslider = () => {
                       src="/assets/images/bath.svg"
                       className="amenties-icons"
                     />
-                    Bath 3
+                    610-969 sqft
                   </li>
                 </ul>
               </div>
@@ -176,7 +176,7 @@ const Topprojectsslider = () => {
                       src="/assets/images/bath.svg"
                       className="amenties-icons"
                     />
-                    Bath 3
+                    610-969 sqft
                   </li>
                 </ul>
               </div>
@@ -217,7 +217,7 @@ const Topprojectsslider = () => {
                       src="/assets/images/bath.svg"
                       className="amenties-icons"
                     />
-                    Bath 3
+                    610-969 sqft
                   </li>
                 </ul>
               </div>
@@ -258,7 +258,7 @@ const Topprojectsslider = () => {
                       src="/assets/images/bath.svg"
                       className="amenties-icons"
                     />
-                    Bath 3
+                    610-969 sqft
                   </li>
                 </ul>
               </div>
@@ -299,7 +299,7 @@ const Topprojectsslider = () => {
                       src="/assets/images/bath.svg"
                       className="amenties-icons"
                     />
-                    Bath 3
+                    610-969 sqft
                   </li>
                 </ul>
               </div>
@@ -340,7 +340,7 @@ const Topprojectsslider = () => {
                       src="/assets/images/bath.svg"
                       className="amenties-icons"
                     />
-                    Bath 3
+                    610-969 sqft
                   </li>
                 </ul>
               </div>

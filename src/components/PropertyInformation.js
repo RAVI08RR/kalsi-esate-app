@@ -39,9 +39,8 @@ const PropertyInformation = () => {
                     className="crad-review-icon"
                     alt="img"
                   />
-
-                  <h2 className="years mt-5">20K +</h2>
                   <h6 className="since">Property Listing</h6>
+                  <h2 className="years">20K +</h2>
                 </div>
 
                 <div className="card card-project-review">
@@ -50,8 +49,8 @@ const PropertyInformation = () => {
                     className="crad-review-icon"
                     alt="img"
                   />
-                  <h2 className="years mt-5">20K +</h2>
-                  <h6 className="since">Property Listing</h6>
+                  <h6 className="since">Real Estate Advisors</h6>
+                  <h2 className="years">20K +</h2>
                 </div>
                 <div className="card card-project-review">
                   <img
@@ -68,9 +67,8 @@ const PropertyInformation = () => {
                     className="crad-review-icon"
                     alt="img"
                   />
-
-                  <h2 className="years">1000 +</h2>
                   <h6 className="since">Branded Developers</h6>
+                  <h2 className="years">1000 +</h2>
                 </div>
                 <div className="card card-project-review">
                   <img
@@ -78,8 +76,8 @@ const PropertyInformation = () => {
                     className="crad-review-icon"
                     alt="img"
                   />
-                  <h2 className="years">1000 +</h2>
-                  <h6 className="since">Branded Developers</h6>
+                  <h6 className="since">Customer Satisfaction</h6>
+                  <h2 className="years">95%</h2>
                 </div>
               </div>
             </div>

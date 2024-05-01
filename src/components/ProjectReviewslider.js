@@ -70,7 +70,7 @@ const ProjectReviewslider = () => {
             </div>
             <div className="col-lg-6">
               <div className="project-review-description">
-                <span className="Preview-title">Upcoming Projects Preview</span>
+                <span className="Preview-title">Highlighted Projects</span>
                 <h2 className="pb-2  pt-2 pl-0">
                   Swathi Prashanthi Apartments at Adyar, Chennai
                 </h2>
@@ -105,8 +105,8 @@ const ProjectReviewslider = () => {
                     1199-1887 sqft
                   </li>
                   <li class="features-list-icons">
-                    <img src="/assets/images/year.svg" class="amenties-icons" />
-                    2026
+                    <img src="/assets/images/home.svg" class="amenties-icons" />
+                    Apartment
                   </li>
                 </ul>
                 <div className="equiry-list-btns">
@@ -133,7 +133,7 @@ const ProjectReviewslider = () => {
             </div>
             <div className="col-lg-6">
               <div className="project-review-description">
-                <span className="Preview-title">Upcoming Projects Preview</span>
+                <span className="Preview-title">Highlighted Projects</span>
                 <h2 className="pb-2  pt-2 pl-0">
                   Swathi Prashanthi Apartments at Adyar, Chennai
                 </h2>
@@ -168,8 +168,8 @@ const ProjectReviewslider = () => {
                     1199-1887 sqft
                   </li>
                   <li class="features-list-icons">
-                    <img src="/assets/images/year.svg" class="amenties-icons" />
-                    2026
+                    <img src="/assets/images/home.svg" class="amenties-icons" />
+                    Apartment
                   </li>
                 </ul>
                 <div className="equiry-list-btns">
@@ -196,7 +196,7 @@ const ProjectReviewslider = () => {
             </div>
             <div className="col-lg-6">
               <div className="project-review-description">
-                <span className="Preview-title">Upcoming Projects Preview</span>
+                <span className="Preview-title">Highlighted Projects</span>
                 <h2 className="pb-2  pt-2 pl-0">
                   Swathi Prashanthi Apartments at Adyar, Chennai
                 </h2>
@@ -231,8 +231,8 @@ const ProjectReviewslider = () => {
                     1199-1887 sqft
                   </li>
                   <li class="features-list-icons">
-                    <img src="/assets/images/year.svg" class="amenties-icons" />
-                    2026
+                    <img src="/assets/images/home.svg" class="amenties-icons" />
+                    Apartment
                   </li>
                 </ul>
                 <div className="equiry-list-btns">
@@ -259,7 +259,7 @@ const ProjectReviewslider = () => {
             </div>
             <div className="col-lg-6">
               <div className="project-review-description">
-                <span className="Preview-title">Upcoming Projects Preview</span>
+                <span className="Preview-title">Highlighted Projects</span>
                 <h2 className="pb-2  pt-2 pl-0">
                   Swathi Prashanthi Apartments at Adyar, Chennai
                 </h2>
@@ -294,8 +294,8 @@ const ProjectReviewslider = () => {
                     1199-1887 sqft
                   </li>
                   <li class="features-list-icons">
-                    <img src="/assets/images/year.svg" class="amenties-icons" />
-                    2026
+                    <img src="/assets/images/home.svg" class="amenties-icons" />
+                    Apartment
                   </li>
                 </ul>
                 <div className="equiry-list-btns">
