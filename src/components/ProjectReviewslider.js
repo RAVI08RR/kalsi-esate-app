@@ -36,6 +36,8 @@ const ProjectReviewslider = () => {
     dots: false,
     arrow: false,
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 1000,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,

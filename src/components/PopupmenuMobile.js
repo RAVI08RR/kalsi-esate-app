@@ -9,7 +9,7 @@ import {
   Collapse,
 } from "@mui/material";
 
-const PopupHeader = ({ open, onClose }) => {
+const PopupmenuMobile = ({ open, onClose }) => {
   const [openMenu, setOpenMenu] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -58,16 +58,18 @@ const PopupHeader = ({ open, onClose }) => {
 
       <ul className="menu-container">
         <a className="text-black-nav" href="/">
-          <li className="nav-link-btn">Home</li>
+          <li className="nav-link-btn">New Launch</li>
+        </a>
+        <a className="text-black-nav" href="#">
+          <li className="nav-link-btn ">Projects</li>
+        </a>
+        <a className="text-black-nav" href="#">
+          <li className="nav-link-btn "> Hot Projects</li>
         </a>
 
-        <a className="text-black-nav" href="#">
-          <li className="nav-link-btn ">About us</li>
-        </a>
         <a className="text-black-nav" href="#">
           <li className="nav-link-btn">Loans</li>
         </a>
-
         <a className="text-black-nav contact-btn" href="#">
           <li className="contact-list">Contact</li>
         </a>
@@ -75,38 +77,12 @@ const PopupHeader = ({ open, onClose }) => {
 
       <div className="contact-menu">
         <ul className="contact-menu">
-          <li className="social-icons">
-            <img
-              src="assets/images/footer-images/Facebook.svg"
-              className="header-socail-icons"
-            />
-          </li>
-          <li className="social-icons">
-            <img
-              src="/assets/images/footer-images/instagram.svg"
-              alt="Facebook"
-              className="header-socail-icons"
-            />
-          </li>
-
-          <li className="social-icons">
-            <img
-              src="/assets/images/footer-images/twiteer.svg"
-              alt="Facebook"
-              className="header-socail-icons"
-            />
-          </li>
-
-          <li className="social-icons">
-            <img
-              src="assets/images/footer-images/youtube.svg"
-              className="header-socail-icons"
-            />
-          </li>
+          <li className="social-icons"> </li>
+          <li className="social-icons"> </li>
         </ul>
       </div>
     </Drawer>
   );
 };
 
-export default PopupHeader;
+export default PopupmenuMobile;

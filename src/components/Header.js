@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from "react";
 import PopupHeader from "./PopupHeader";
 import { Button } from "@mui/material";
+import PopupmenuMobile from "./PopupmenuMobile";
 const Header = () => {
   const [scroll, setScroll] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-
+  const [isPopupMobileOpen, setisPopupMobileOpen] = useState(false);
   const handleOpenPopup = () => {
     setIsPopupOpen(true);
   };
+  const handlemobileOpenPopup = () => {
+    setisPopupMobileOpen(true);
+  };
 
+  const handleCloseMobilePopup = () => {
+    setisPopupMobileOpen(false);
+  };
   const handleClosePopup = () => {
     setIsPopupOpen(false);
   };
@@ -43,19 +50,21 @@ const Header = () => {
             alt="Logo"
           />
         </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
+        <button className="navbar-toggler" type="button">
+          <button
+            type="submit"
+            className="menu-popup"
+            onClick={handlemobileOpenPopup}
+          >
+            <img
+              src="assets/images/menu-icon.svg"
+              className="menu-icon-toggle"
+              alt="img"
+            />
+          </button>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul className="navbar-nav  mb-2 mb-lg-0 ml-5">
+          <ul className="navbar-nav  m-auto">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">
                 New Launch
@@ -127,14 +136,13 @@ const Header = () => {
               </ul>
             </li>
           </ul>
+          {/* <ul className="navbar-nav "></ul> */}
           <ul className="navbar-nav">
-            <li className="nav-item dropdown">
+            <li className="nav-item">
               <button type="button" className="contact-us-btn">
                 Enquire us
               </button>
             </li>
-          </ul>
-          <ul className="menu-toggle-btn">
             <li>
               <button
                 type="submit"
@@ -152,6 +160,10 @@ const Header = () => {
         </div>
       </div>
       <PopupHeader open={isPopupOpen} onClose={handleClosePopup} />
+      <PopupmenuMobile
+        open={isPopupMobileOpen}
+        onClose={handleCloseMobilePopup}
+      />
     </nav>
   );
 };

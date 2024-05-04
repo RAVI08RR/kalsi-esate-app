@@ -19,14 +19,32 @@ const Home = () => {
       title: "Start Your Home Journey Today.",
       description:
         "With The Most Complete Source Of Homes For Sale & Properties Near You.",
-      cities: ["New York", "Los Angeles", "Chicago", "Houston"],
+      cities: [
+        "Mumbai",
+        "Delhi",
+        "Pune",
+        "Kolkata",
+        "Chennai",
+        "Bangalore",
+        "Ahmedabad",
+        "Hyderabad",
+      ],
     },
     {
       bgImage: "/assets/images/banner-2.png",
       title: "Start Your Home Journey Today.",
       description:
         "With The Most Complete Source Of Homes For Sale & Properties Near You.",
-      cities: ["San Francisco", "Seattle", "Miami", "Boston"],
+      cities: [
+        "Mumbai",
+        "Delhi",
+        "Pune",
+        "Kolkata",
+        "Chennai",
+        "Bangalore",
+        "Ahmedabad",
+        "Hyderabad",
+      ],
     },
     // Add more slide objects as needed
   ];

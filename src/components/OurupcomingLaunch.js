@@ -36,6 +36,8 @@ const OurupcomingLaunch = () => {
     dots: false,
     arrow: true,
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 1000,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,

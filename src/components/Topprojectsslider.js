@@ -10,6 +10,7 @@ function SampleNextArrow(props) {
       className={className}
       style={{ ...style, display: "block", background: "red" }}
       onClick={onClick}
+      id="arrow-luxery-slider-arrow"
     >
       <img src="/assets/images/next-arrow.svg" className="arrow-control" />
     </div>
@@ -23,6 +24,7 @@ function SamplePrevArrow(props) {
       className={className}
       style={{ ...style, display: "block", background: "green" }}
       onClick={onClick}
+      id="arrow-luxery-slider-arrow"
     >
       <img src="/assets/images/prev-icon.svg" className="arrow-control" />
     </div>
@@ -34,7 +36,10 @@ const Topprojectsslider = () => {
     dots: false,
     arrow: true,
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 1000,
     speed: 500,
+
     slidesToShow: 4,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
@@ -60,7 +65,7 @@ const Topprojectsslider = () => {
       <div className="slider-container">
         <h2 className="slider-heading">Top Projects in Mumbai</h2>
 
-        <Slider {...settings}>
+        <Slider className="project-mumbai-slider" {...settings}>
           <div className="card slider-top-projects-cards">
             <img src="assets/images/top-sl-1.png" className="slider-top-card" />
             <div className="card-body">
