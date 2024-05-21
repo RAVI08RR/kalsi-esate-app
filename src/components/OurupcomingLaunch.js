@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import ContentZoom from "react-content-zoom";
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -36,9 +36,9 @@ const OurupcomingLaunch = () => {
     dots: false,
     arrow: true,
     infinite: true,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    speed: 500,
+    // autoplay: true,
+    // autoplaySpeed: 1000,
+    // speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
@@ -66,7 +66,10 @@ const OurupcomingLaunch = () => {
 
         <Slider {...settings}>
           <div className="card slider-upcoming-projects-cards">
-            <img src="assets/images/top-sl-1.png" className="slider-top-card" />
+            <img
+              src="assets/images/up-slide-1.png"
+              className="slider-top-card upcoming-launch-card-img"
+            />
             <div className="card-body">
               <div className="bg-slider-img-card">
                 <h6 className="text-white pb-0 upcoming-title">
@@ -88,53 +91,10 @@ const OurupcomingLaunch = () => {
             </div>
           </div>
           <div className="card slider-upcoming-projects-cards">
-            <img src="assets/images/top-sl-1.png" className="slider-top-card" />
-            <div className="card-body">
-              <div className="bg-slider-img-card">
-                <h6 className="text-white pb-0 upcoming-title">
-                  Swathi Prashanthi Apartments at Adyar,..
-                </h6>
-                <span className="builder-name">By Sridhar Construction</span>
-                <p className="text-white pricing-upcoming">
-                  Price 35 Lac-37.5 Lac
-                </p>
-                <li style={{ color: "#B1B0B0" }} class="loction-list ">
-                  <img
-                    src="/assets/images/map-icon.svg"
-                    alt="img"
-                    class="map-location-icon"
-                  />
-                  &nbsp; At Adyar, Chennai, Tamil Nadu, India, Mumbai
-                </li>
-              </div>
-            </div>
-          </div>
-
-          <div className="card slider-upcoming-projects-cards">
-            <img src="assets/images/top-sl-1.png" className="slider-top-card" />
-            <div className="card-body">
-              <div className="bg-slider-img-card">
-                <h6 className="text-white pb-0 upcoming-title">
-                  Swathi Prashanthi Apartments at Adyar,..
-                </h6>
-                <span className="builder-name">By Sridhar Construction</span>
-                <p className="text-white pricing-upcoming">
-                  Price 35 Lac-37.5 Lac
-                </p>
-                <li style={{ color: "#B1B0B0" }} class="loction-list ">
-                  <img
-                    src="/assets/images/map-icon.svg"
-                    alt="img"
-                    class="map-location-icon"
-                  />
-                  &nbsp; At Adyar, Chennai, Tamil Nadu, India, Mumbai
-                </li>
-              </div>
-            </div>
-          </div>
-
-          <div className="card slider-upcoming-projects-cards">
-            <img src="assets/images/top-sl-1.png" className="slider-top-card" />
+            <img
+              src="assets/images/up-slide-2.png"
+              className="slider-top-card upcoming-launch-card-img"
+            />
             <div className="card-body">
               <div className="bg-slider-img-card">
                 <h6 className="text-white pb-0 upcoming-title">
@@ -157,7 +117,10 @@ const OurupcomingLaunch = () => {
           </div>
 
           <div className="card slider-upcoming-projects-cards">
-            <img src="assets/images/top-sl-1.png" className="slider-top-card" />
+            <img
+              src="assets/images/up-slide-3.png"
+              className="slider-top-card upcoming-launch-card-img"
+            />
             <div className="card-body">
               <div className="bg-slider-img-card">
                 <h6 className="text-white pb-0 upcoming-title">
@@ -180,7 +143,10 @@ const OurupcomingLaunch = () => {
           </div>
 
           <div className="card slider-upcoming-projects-cards">
-            <img src="assets/images/top-sl-1.png" className="slider-top-card" />
+            <img
+              src="assets/images/up-slide-1.png"
+              className="slider-top-card upcoming-launch-card-img"
+            />
             <div className="card-body">
               <div className="bg-slider-img-card">
                 <h6 className="text-white pb-0 upcoming-title">
@@ -203,7 +169,76 @@ const OurupcomingLaunch = () => {
           </div>
 
           <div className="card slider-upcoming-projects-cards">
-            <img src="assets/images/top-sl-1.png" className="slider-top-card" />
+            <ContentZoom
+              zoomPercent={350}
+              largeImageUrl="assets/images/up-slide-2.png"
+              imageUrl="assets/images/up-slide-2.png"
+              contentHeight={300}
+              contentWidth={500}
+            >
+              <img
+                src="assets/images/up-slide-2.png"
+                className="slider-top-card upcoming-launch-card-img"
+                alt="Project Image"
+              />
+            </ContentZoom>
+            {/* 
+            <img
+              src="assets/images/up-slide-2.png"
+              className="slider-top-card upcoming-launch-card-img"
+            /> */}
+            <div className="card-body">
+              <div className="bg-slider-img-card">
+                <h6 className="text-white pb-0 upcoming-title">
+                  Swathi Prashanthi Apartments at Adyar,..
+                </h6>
+                <span className="builder-name">By Sridhar Construction</span>
+                <p className="text-white pricing-upcoming">
+                  Price 35 Lac-37.5 Lac
+                </p>
+                <li style={{ color: "#B1B0B0" }} class="loction-list ">
+                  <img
+                    src="/assets/images/map-icon.svg"
+                    alt="img"
+                    class="map-location-icon"
+                  />
+                  &nbsp; At Adyar, Chennai, Tamil Nadu, India, Mumbai
+                </li>
+              </div>
+            </div>
+          </div>
+
+          <div className="card slider-upcoming-projects-cards">
+            <img
+              src="assets/images/up-slide-3.png"
+              className="slider-top-card upcoming-launch-card-img"
+            />
+            <div className="card-body">
+              <div className="bg-slider-img-card">
+                <h6 className="text-white pb-0 upcoming-title">
+                  Swathi Prashanthi Apartments at Adyar,..
+                </h6>
+                <span className="builder-name">By Sridhar Construction</span>
+                <p className="text-white pricing-upcoming">
+                  Price 35 Lac-37.5 Lac
+                </p>
+                <li style={{ color: "#B1B0B0" }} class="loction-list ">
+                  <img
+                    src="/assets/images/map-icon.svg"
+                    alt="img"
+                    class="map-location-icon"
+                  />
+                  &nbsp; At Adyar, Chennai, Tamil Nadu, India, Mumbai
+                </li>
+              </div>
+            </div>
+          </div>
+
+          <div className="card slider-upcoming-projects-cards">
+            <img
+              src="assets/images/up-slide-3.png"
+              className="slider-top-card upcoming-launch-card-img"
+            />
             <div className="card-body">
               <div className="bg-slider-img-card">
                 <h6 className="text-white pb-0 upcoming-title">

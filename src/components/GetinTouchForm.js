@@ -2,7 +2,12 @@ import React from "react";
 
 const GetinTouchForm = () => {
   return (
-    <div className="container-fluid p-0  mt-5">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="2000"
+      data-aos-delay="200"
+      className="container-fluid p-0  mt-5"
+    >
       <div className="row g-0">
         <div className="col-lg-6 bg-contact-form">
           <div className="form-container">

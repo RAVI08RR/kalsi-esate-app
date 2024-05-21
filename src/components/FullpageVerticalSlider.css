@@ -75,6 +75,14 @@ button.serch-btn-home {
 }
 
 @media (min-width: 960px) {
+  .search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: row-reverse;
+  }
+
   .carousel .control-dots {
     bottom: 254px !important;
     position: absolute;
@@ -118,15 +126,19 @@ img.city-map-icon {
 
 @media (max-width: 768px) {
   .search-box select {
-    padding: 11px 10px 10px 10px !important;
-    font-size: 16px;
+    height: 50px !important;
     border: none;
-    border-radius: 0px;
-    margin: 0px 0px;
+    border-radius: 0;
+    font-family: "Nexa-Medium";
+    background-color: white !important;
+
+    font-size: 16px;
+    margin: 0;
+    padding: 12px 10px 10px !important;
   }
   button.serch-btn-home {
     background-color: #cd842f;
-    height: 44px;
+    height: 50px;
     border: none;
     width: auto !important;
     color: var(--white, #fff);
@@ -147,7 +159,7 @@ img.city-map-icon {
   .search-box input {
     flex-grow: 1;
     max-width: 461px;
-    height: 44px;
+    height: 50px;
     margin-left: 0px !important;
   }
 
@@ -169,4 +181,103 @@ img.city-map-icon {
     background-repeat: no-repeat;
     width: 100%;
   }
+}
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-direction: row-reverse !important;
+}
+
+.carousel .slider {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel .slider.animating {
+  opacity: 0 !important;
+  animation: fadeInAnimation 0.5s ease-in-out forwards !important;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* .full-screen-slider {
+  width: 100vw;
+  height: 100vh;
+  /* position: relative; *
+}
+
+.flickity-slider {
+  height: 100%;
+}
+
+.full-screen-slider {
+  width: 100vw;
+  height: 100vh;
+ position: relative; 
+}
+
+.flickity-slider {
+  height: 100%;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+   position: relative; 
+}
+
+.slide-content {
+  text-align: center;
+  color: white;
+}
+
+.slides-contents {
+  max-width: 600px;
+} */
+
+.carousel-indicators [data-bs-target] {
+  border-radius: 50% !important;
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 10px !important;
+  height: 10px !important;
+  padding: 0;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: 0.5;
+  transition: opacity 0.6s ease;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% 100%;
+  display: none;
+}
+/* Hide the carousel arrows */
+.carousel-control-prev,
+.carousel-control-next {
+  display: none !important;
 }

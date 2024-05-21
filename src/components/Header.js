@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import PopupHeader from "./PopupHeader";
 import { Button } from "@mui/material";
 import PopupmenuMobile from "./PopupmenuMobile";
-const Header = () => {
+const Header = ({ showBg }) => {
   const [scroll, setScroll] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isPopupMobileOpen, setisPopupMobileOpen] = useState(false);
@@ -41,6 +41,7 @@ const Header = () => {
         scroll ? "scroll-background" : "#0C0C0C"
       }`}
       id="home-header"
+      style={{ background: showBg && "#0C0C0C" }}
     >
       <div className="container">
         <a className="navbar-brand" href="#">
@@ -87,17 +88,17 @@ const Header = () => {
               >
                 <li>
                   <a className="dropdown-item" href="#">
-                    Action
+                    Residential
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">
-                    Another action
+                    Commercial
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">
-                    Something else here
+                    Plots
                   </a>
                 </li>
               </ul>

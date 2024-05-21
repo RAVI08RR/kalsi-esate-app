@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="text-white py-5 footer-bg-img">
       <div className="container ">
         <div className="row">
-          <div className="col-md-3 footer-menu-border">
+          <div className="col-lg-3 footer-menu-border">
             <h5 className="footer-menu-head">REAL ESTATE</h5>
             <ul className="list-unstyled">
               <li>
@@ -50,7 +50,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-md-3 footer-menu-border">
+          <div className="col-lg-3 footer-menu-border">
             <h5 className="footer-menu-head">BUY PROPERTY</h5>
             <ul className="list-unstyled">
               <li>
@@ -95,7 +95,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-md-3 footer-menu-border">
+          <div className="col-lg-3 footer-menu-border">
             <h5 className="footer-menu-head">RESIDENTIAL PROJECT</h5>
             <ul className="list-unstyled">
               <li>
@@ -140,7 +140,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-md-3 footer-menu-border">
+          <div className="col-lg-3 footer-menu-border last-list">
             <h5 className="footer-menu-head">FLATS FOR SALE</h5>
             <ul className="list-unstyled">
               <li>
@@ -187,7 +187,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="row mt-4">
-          <div className="col-md-4">
+          <div className="col-lg-4">
             <a href="#" className="navbar-brand">
               <img
                 src="/assets/images/Logo-main.svg"
@@ -218,7 +218,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-2">
+          <div className="col-lg-2">
             <h5 className="footer-menu-head">PROPERTIES IN INDIA</h5>
             <ul className="list-unstyled">
               <li className="footer-properties">
@@ -253,7 +253,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-md-2">
+          <div className="col-lg-2">
             <h5 className="footer-menu-head">Quick Links</h5>
             <ul className="list-unstyled">
               <li className="footer-properties">
@@ -322,7 +322,7 @@ const Footer = () => {
               </li>
             </ul>
 
-            <div className="mt-3">
+            <div className="mt-3 footer-socail-icons-container">
               <button className="btn-social-icons">
                 <a href="#" className="social-icons-footer">
                   <img

@@ -62,4 +62,13 @@
   object-fit: cover;
 }
 
+.awssld__content {
+  background-color: var(--content-background-color);
+  overflow: hidden;
+  display: flex;
+  height: 100vh !important;
+  align-items: center;
+  justify-content: center;
+}
+
 /* end  */

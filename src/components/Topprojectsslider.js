@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import { NavLink } from "react-router-dom";
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -36,9 +36,9 @@ const Topprojectsslider = () => {
     dots: false,
     arrow: true,
     infinite: true,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    speed: 500,
+    // autoplay: true,
+    // autoplaySpeed: 1000,
+    // speed: 500,
 
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -66,291 +66,321 @@ const Topprojectsslider = () => {
         <h2 className="slider-heading">Top Projects in Mumbai</h2>
 
         <Slider className="project-mumbai-slider" {...settings}>
-          <div className="card slider-top-projects-cards">
-            <img src="assets/images/top-sl-1.png" className="slider-top-card" />
-            <div className="card-body">
-              <div className="bg-slider-img-card">
-                <h2>Swathi Prashanthi Apartments at Adyar,..</h2>
-                <li class="loction-list">
-                  <img
-                    src="/assets/images/map-icon.svg"
-                    alt="img"
-                    class="map-location-icon"
-                  />
-                  By Sridhar Construction
-                </li>
+          <NavLink to="/property-detail" className="list-property-link">
+            <div className="card slider-top-projects-cards">
+              <img
+                src="assets/images/top-sl-1.png"
+                className="slider-top-card mumbai-img  "
+              />
+              <div className="card-body">
+                <div className="bg-slider-img-card">
+                  <h2>Swathi Prashanthi Apartments at Adyar,..</h2>
+                  <li class="loction-list">
+                    <img
+                      src="/assets/images/map-icon.svg"
+                      alt="img"
+                      class="map-location-icon"
+                    />
+                    By Sridhar Construction
+                  </li>
 
-                <ul className="features-list">
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/home-icon.svg"
-                      className="amenties-icons"
-                    />
-                    House
-                  </li>
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/bed.svg"
-                      className="amenties-icons"
-                    />
-                    Bed
-                  </li>
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/bath.svg"
-                      className="amenties-icons"
-                    />
-                    610-969 sqft
-                  </li>
-                </ul>
+                  <ul className="features-list">
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/home-icon.svg"
+                        className="amenties-icons"
+                      />
+                      House
+                    </li>
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/bed.svg"
+                        className="amenties-icons"
+                      />
+                      Bed
+                    </li>
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/bath.svg"
+                        className="amenties-icons"
+                      />
+                      610-969 sqft
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="card slider-top-projects-cards">
-            <img src="assets/images/top-sl-2.png" className="slider-top-card" />
-            <div className="card-body">
-              <div className="bg-slider-img-card">
-                <h2>Prashanthi Apartments at Adyar, Chennai</h2>
-                <li class="loction-list">
-                  <img
-                    src="/assets/images/map-icon.svg"
-                    alt="img"
-                    class="map-location-icon"
-                  />
-                  By Goldorf Media
-                </li>
+          </NavLink>
+          <NavLink to="/property-detail" className="list-property-link">
+            <div className="card slider-top-projects-cards">
+              <img
+                src="assets/images/top-sl-2.png"
+                className="slider-top-card mumbai-img"
+              />
+              <div className="card-body">
+                <div className="bg-slider-img-card">
+                  <h2>Prashanthi Apartments at Adyar, Chennai</h2>
+                  <li class="loction-list">
+                    <img
+                      src="/assets/images/map-icon.svg"
+                      alt="img"
+                      class="map-location-icon"
+                    />
+                    By Goldorf Media
+                  </li>
 
-                <ul className="features-list">
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/home-icon.svg"
-                      className="amenties-icons"
-                    />
-                    House
-                  </li>
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/bed.svg"
-                      className="amenties-icons"
-                    />
-                    Bed
-                  </li>
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/bath.svg"
-                      className="amenties-icons"
-                    />
-                    610-969 sqft
-                  </li>
-                </ul>
+                  <ul className="features-list">
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/home-icon.svg"
+                        className="amenties-icons"
+                      />
+                      House
+                    </li>
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/bed.svg"
+                        className="amenties-icons"
+                      />
+                      Bed
+                    </li>
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/bath.svg"
+                        className="amenties-icons"
+                      />
+                      610-969 sqft
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
+          </NavLink>
+          <NavLink to="/property-detail" className="list-property-link">
+            <div className="card slider-top-projects-cards">
+              <img
+                src="assets/images/top-sl-3.png"
+                className="slider-top-card mumbai-img"
+              />
+              <div className="card-body">
+                <div className="bg-slider-img-card">
+                  <h2>Swathi Prashanthi Apartments at Adyar,..</h2>
+                  <li class="loction-list">
+                    <img
+                      src="/assets/images/map-icon.svg"
+                      alt="img"
+                      class="map-location-icon"
+                    />
+                    R K Builders
+                  </li>
 
-          <div className="card slider-top-projects-cards">
-            <img src="assets/images/top-sl-3.png" className="slider-top-card" />
-            <div className="card-body">
-              <div className="bg-slider-img-card">
-                <h2>Swathi Prashanthi Apartments at Adyar,..</h2>
-                <li class="loction-list">
-                  <img
-                    src="/assets/images/map-icon.svg"
-                    alt="img"
-                    class="map-location-icon"
-                  />
-                  R K Builders
-                </li>
-
-                <ul className="features-list">
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/home-icon.svg"
-                      className="amenties-icons"
-                    />
-                    House
-                  </li>
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/bed.svg"
-                      className="amenties-icons"
-                    />
-                    Bed
-                  </li>
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/bath.svg"
-                      className="amenties-icons"
-                    />
-                    610-969 sqft
-                  </li>
-                </ul>
+                  <ul className="features-list">
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/home-icon.svg"
+                        className="amenties-icons"
+                      />
+                      House
+                    </li>
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/bed.svg"
+                        className="amenties-icons"
+                      />
+                      Bed
+                    </li>
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/bath.svg"
+                        className="amenties-icons"
+                      />
+                      610-969 sqft
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
+          </NavLink>
+          <NavLink to="/property-detail" className="list-property-link">
+            <div className="card slider-top-projects-cards">
+              <img
+                src="assets/images/top-sl-4.png"
+                className="slider-top-card mumbai-img"
+              />
+              <div className="card-body">
+                <div className="bg-slider-img-card">
+                  <h2>Swathi Prashanthi Apartments at Adyar,..</h2>
+                  <li class="loction-list">
+                    <img
+                      src="/assets/images/map-icon.svg"
+                      alt="img"
+                      class="map-location-icon"
+                    />
+                    At Adyar, Chennai
+                  </li>
 
-          <div className="card slider-top-projects-cards">
-            <img src="assets/images/top-sl-4.png" className="slider-top-card" />
-            <div className="card-body">
-              <div className="bg-slider-img-card">
-                <h2>Swathi Prashanthi Apartments at Adyar,..</h2>
-                <li class="loction-list">
-                  <img
-                    src="/assets/images/map-icon.svg"
-                    alt="img"
-                    class="map-location-icon"
-                  />
-                  At Adyar, Chennai
-                </li>
-
-                <ul className="features-list">
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/home-icon.svg"
-                      className="amenties-icons"
-                    />
-                    House
-                  </li>
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/bed.svg"
-                      className="amenties-icons"
-                    />
-                    Bed
-                  </li>
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/bath.svg"
-                      className="amenties-icons"
-                    />
-                    610-969 sqft
-                  </li>
-                </ul>
+                  <ul className="features-list">
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/home-icon.svg"
+                        className="amenties-icons"
+                      />
+                      House
+                    </li>
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/bed.svg"
+                        className="amenties-icons"
+                      />
+                      Bed
+                    </li>
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/bath.svg"
+                        className="amenties-icons"
+                      />
+                      610-969 sqft
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
+          </NavLink>
+          <NavLink to="/property-detail" className="list-property-link">
+            <div className="card slider-top-projects-cards">
+              <img
+                src="assets/images/top-sl-5.png"
+                className="slider-top-card mumbai-img"
+              />
+              <div className="card-body">
+                <div className="bg-slider-img-card">
+                  <h2>Swathi Prashanthi Apartments at Adyar,..</h2>
+                  <li class="loction-list">
+                    <img
+                      src="/assets/images/map-icon.svg"
+                      alt="img"
+                      class="map-location-icon"
+                    />
+                    At Adyar, Chennai
+                  </li>
 
-          <div className="card slider-top-projects-cards">
-            <img src="assets/images/top-sl-5.png" className="slider-top-card" />
-            <div className="card-body">
-              <div className="bg-slider-img-card">
-                <h2>Swathi Prashanthi Apartments at Adyar,..</h2>
-                <li class="loction-list">
-                  <img
-                    src="/assets/images/map-icon.svg"
-                    alt="img"
-                    class="map-location-icon"
-                  />
-                  At Adyar, Chennai
-                </li>
-
-                <ul className="features-list">
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/home-icon.svg"
-                      className="amenties-icons"
-                    />
-                    House
-                  </li>
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/bed.svg"
-                      className="amenties-icons"
-                    />
-                    Bed
-                  </li>
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/bath.svg"
-                      className="amenties-icons"
-                    />
-                    610-969 sqft
-                  </li>
-                </ul>
+                  <ul className="features-list">
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/home-icon.svg"
+                        className="amenties-icons"
+                      />
+                      House
+                    </li>
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/bed.svg"
+                        className="amenties-icons"
+                      />
+                      Bed
+                    </li>
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/bath.svg"
+                        className="amenties-icons"
+                      />
+                      610-969 sqft
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
+          </NavLink>
+          <NavLink to="/property-detail" className="list-property-link">
+            <div className="card slider-top-projects-cards">
+              <img
+                src="assets/images/top-sl-6.png"
+                className="slider-top-card mumbai-img"
+              />
+              <div className="card-body">
+                <div className="bg-slider-img-card">
+                  <h2>Swathi Prashanthi Apartments at Adyar,..</h2>
+                  <li class="loction-list">
+                    <img
+                      src="/assets/images/map-icon.svg"
+                      alt="img"
+                      class="map-location-icon"
+                    />
+                    R K Builders
+                  </li>
 
-          <div className="card slider-top-projects-cards">
-            <img src="assets/images/top-sl-6.png" className="slider-top-card" />
-            <div className="card-body">
-              <div className="bg-slider-img-card">
-                <h2>Swathi Prashanthi Apartments at Adyar,..</h2>
-                <li class="loction-list">
-                  <img
-                    src="/assets/images/map-icon.svg"
-                    alt="img"
-                    class="map-location-icon"
-                  />
-                  R K Builders
-                </li>
-
-                <ul className="features-list">
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/home-icon.svg"
-                      className="amenties-icons"
-                    />
-                    House
-                  </li>
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/bed.svg"
-                      className="amenties-icons"
-                    />
-                    Bed
-                  </li>
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/bath.svg"
-                      className="amenties-icons"
-                    />
-                    610-969 sqft
-                  </li>
-                </ul>
+                  <ul className="features-list">
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/home-icon.svg"
+                        className="amenties-icons"
+                      />
+                      House
+                    </li>
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/bed.svg"
+                        className="amenties-icons"
+                      />
+                      Bed
+                    </li>
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/bath.svg"
+                        className="amenties-icons"
+                      />
+                      610-969 sqft
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
+          </NavLink>
+          <NavLink to="/property-detail" className="list-property-link">
+            <div className="card slider-top-projects-cards">
+              <img
+                src="assets/images/top-sl-3.png"
+                className="slider-top-card mumbai-img"
+              />
+              <div className="card-body">
+                <div className="bg-slider-img-card">
+                  <h2>Swathi Prashanthi Apartments at Adyar,..</h2>
+                  <li class="loction-list">
+                    <img
+                      src="/assets/images/map-icon.svg"
+                      alt="img"
+                      class="map-location-icon"
+                    />
+                    By Sridhar Construction
+                  </li>
 
-          <div className="card slider-top-projects-cards">
-            <img src="assets/images/top-sl-1.png" className="slider-top-card" />
-            <div className="card-body">
-              <div className="bg-slider-img-card">
-                <h2>Swathi Prashanthi Apartments at Adyar,..</h2>
-                <li class="loction-list">
-                  <img
-                    src="/assets/images/map-icon.svg"
-                    alt="img"
-                    class="map-location-icon"
-                  />
-                  By Sridhar Construction
-                </li>
-
-                <ul className="features-list">
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/home-icon.svg"
-                      className="amenties-icons"
-                    />
-                    House
-                  </li>
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/bed.svg"
-                      className="amenties-icons"
-                    />
-                    Bed
-                  </li>
-                  <li className="features-list-icons">
-                    <img
-                      src="/assets/images/bath.svg"
-                      className="amenties-icons"
-                    />
-                    610-969 sqft
-                  </li>
-                </ul>
+                  <ul className="features-list">
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/home-icon.svg"
+                        className="amenties-icons"
+                      />
+                      House
+                    </li>
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/bed.svg"
+                        className="amenties-icons"
+                      />
+                      Bed
+                    </li>
+                    <li className="features-list-icons">
+                      <img
+                        src="/assets/images/bath.svg"
+                        className="amenties-icons"
+                      />
+                      610-969 sqft
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
+          </NavLink>
         </Slider>
       </div>
     </div>

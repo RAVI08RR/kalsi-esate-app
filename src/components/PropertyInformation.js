@@ -5,7 +5,13 @@ const PropertyInformation = () => {
     <div className="property-information-section">
       <div className="container">
         <div className="row">
-          <div className="col-lg-6">
+          <div
+            data-aos-delay="1000"
+            data-aos="fade-right"
+            // data-aos-offset="100"
+            data-aos-easing="ease-in-sine"
+            className="col-lg-6"
+          >
             <img
               src="assets/images/property-img-left.png"
               className="property-img"
@@ -13,7 +19,13 @@ const PropertyInformation = () => {
             />
           </div>
 
-          <div className="col-lg-6 pl-5">
+          <div
+            data-aos-delay="1000"
+            data-aos="fade-left"
+            // data-aos-offset="100"
+            data-aos-easing="ease-in-sine"
+            className="col-lg-6 pl-5"
+          >
             <div className=" project-review-description">
               <h2>Here’s How You Can Get The Best Property in India Online</h2>
               <p>

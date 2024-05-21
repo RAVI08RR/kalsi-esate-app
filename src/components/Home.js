@@ -1,6 +1,6 @@
 import React from "react";
 import LuxeryHomesslider from "./LuxeryHomesslider";
-import VerticalSlider from "./VerticalSlider";
+// import VerticalSlider from ".././components/VerticalSlider/VerticalSlider";
 import FullPageVerticalSlider from "./FullPageVerticalSlider";
 import Topprojectsslider from "./Topprojectsslider";
 import OurupcomingLaunch from "./OurupcomingLaunch";
@@ -11,6 +11,7 @@ import TestimonialSlider from "./TestimonialSlider";
 import Newsblogs from "./Newsblogs";
 import GetinTouchForm from "./GetinTouchForm";
 import DownloadappSection from "./DownloadappSection";
+import FullWidthSlider from "./FullWidthSlider";
 
 const Home = () => {
   const slides = [
@@ -51,7 +52,9 @@ const Home = () => {
 
   return (
     <div>
-      <FullPageVerticalSlider slides={slides} />
+      <FullPageVerticalSlider />
+      {/* <FullWidthSlider /> */}
+      {/* <FullPageVerticalSlider /> */}
       <LuxeryHomesslider />
       <Topprojectsslider />
       <OurupcomingLaunch />

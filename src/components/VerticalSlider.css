@@ -274,5 +274,17 @@
 
 /* Styles for dropdown list items on hover */
 .dropdown ul li:hover {
-  background-color: #f0f0f0;
+  background-color: black;
+}
+.dropdown ul li a {
+  color: white;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: #c08735 !important;
+  background-color: black !important;
+}
+.dropdown-menu li a {
+  font-family: "Nexa-Medium", sans-serif;
 }

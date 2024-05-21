@@ -24,19 +24,26 @@
 
 // export default App;
 
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Header from "./components/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import PropertyDetailpage from "./pages/PropertyDetailpage";
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <Router>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/property-detail" element={<PropertyDetailpage />} />
       </Routes>
       <Footer />
     </Router>

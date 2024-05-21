@@ -1,0 +1,36 @@
+.full-page-vertical-slider-container .slick-slider .slick-list {
+  width: 100%;
+
+  padding: 0px 0px !important;
+  margin-left: -1rem !important;
+}
+
+/* FullWidthSlider.css */
+
+.slide-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: fadeAnimation 20s infinite;
+}
+
+@keyframes fadeAnimation {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

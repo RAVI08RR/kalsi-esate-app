@@ -36,9 +36,9 @@ const ProjectReviewslider = () => {
     dots: false,
     arrow: false,
     infinite: true,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    speed: 500,
+    // autoplay: true,
+    // autoplaySpeed: 1000,
+    // speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
@@ -129,7 +129,7 @@ const ProjectReviewslider = () => {
           <div className="row pt-0">
             <div className="col-lg-6 p-0">
               <img
-                src="/assets/images/review-left-slide.png"
+                src="/assets/images/review-left-slide-2.png"
                 className="right-side-img-review"
               />
             </div>
@@ -137,7 +137,7 @@ const ProjectReviewslider = () => {
               <div className="project-review-description">
                 <span className="Preview-title">Highlighted Projects</span>
                 <h2 className="pb-2  pt-2 pl-0">
-                  Swathi Prashanthi Apartments at Adyar, Chennai
+                  A Shridhar Kaveri Kadamb at Shilaj, Ahmedabad
                 </h2>
                 <p>
                   The renovation of this 1965 ranch-style home involved the
@@ -152,7 +152,7 @@ const ProjectReviewslider = () => {
                       alt="img"
                       class="map-location-icon"
                     />
-                    At Adyar, Chennai, Tamil Nadu, India, Mumbai
+                    At Shilaj, Ahmedabad, Gujarat, India, Mumbai
                   </li>
                 </ul>
                 <h3 className="text-black">Price 2.74 Cr-3.00 Cr</h3>
@@ -255,7 +255,7 @@ const ProjectReviewslider = () => {
           <div className="row pt-0">
             <div className="col-lg-6 p-0">
               <img
-                src="/assets/images/review-left-slide.png"
+                src="/assets/images/review-left-slide-3.png"
                 className="right-side-img-review"
               />
             </div>
@@ -263,7 +263,7 @@ const ProjectReviewslider = () => {
               <div className="project-review-description">
                 <span className="Preview-title">Highlighted Projects</span>
                 <h2 className="pb-2  pt-2 pl-0">
-                  Swathi Prashanthi Apartments at Adyar, Chennai
+                  Vaishnavi Ellora at Karanjade, Navi Mumbai
                 </h2>
                 <p>
                   The renovation of this 1965 ranch-style home involved the
@@ -278,7 +278,8 @@ const ProjectReviewslider = () => {
                       alt="img"
                       class="map-location-icon"
                     />
-                    At Adyar, Chennai, Tamil Nadu, India, Mumbai
+                    At Karanjade, Panvel, Navi Mumbai,
+                    Maharashtra, India, Mumbai
                   </li>
                 </ul>
                 <h3 className="text-black">Price 2.74 Cr-3.00 Cr</h3>
