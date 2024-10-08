@@ -8,7 +8,7 @@ import {
   MenuItem,
   Collapse,
 } from "@mui/material";
-
+import { a } from "react-router-dom";
 const PopupHeader = ({ open, onClose }) => {
   const [openMenu, setOpenMenu] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -38,37 +38,49 @@ const PopupHeader = ({ open, onClose }) => {
           <p className="menu-before-border"></p> menu{" "}
         </li>
         <li>
-          <button
+          <buthrefn
             className="close-btn"
             onClick={onClose}
             aria-label="Close drawer"
           >
-            <img src="assets/images/cross-icon.svg" />
-          </button>
+            <img
+              src="/assets/images/cross-icon.svg"
+              alt="img"
+              className="popup-close-menu-icon"
+            />
+          </buthrefn>
         </li>
       </ul>
 
-      {/* <IconButton
+      {/* <IconButhrefn
         className="close-btn"
         onClick={onClose}
         aria-label="Close drawer"
       >
         x
-      </IconButton> */}
+      </IconButhrefn> */}
 
       <ul className="menu-container">
         <a className="text-black-nav" href="/">
           <li className="nav-link-btn">Home</li>
         </a>
 
-        <a className="text-black-nav" href="#">
+        <a className="text-black-nav" href="/about-us">
           <li className="nav-link-btn ">About us</li>
         </a>
-        <a className="text-black-nav" href="#">
+        <a className="text-black-nav" href="/home-loan">
           <li className="nav-link-btn">Loans</li>
         </a>
 
-        <a className="text-black-nav contact-btn" href="#">
+        <a className="text-black-nav" href="/hrefp-builder">
+          <li className="nav-link-btn">Top Builders</li>
+        </a>
+
+        <a className="text-black-nav" href="/blog-list">
+          <li className="nav-link-btn">News and Blogs</li>
+        </a>
+
+        <a className="text-black-nav contact-btn" href="/contact-us">
           <li className="contact-list">Contact</li>
         </a>
       </ul>
@@ -77,8 +89,9 @@ const PopupHeader = ({ open, onClose }) => {
         <ul className="contact-menu">
           <li className="social-icons">
             <img
-              src="assets/images/footer-images/Facebook.svg"
+              src="/assets/images/footer-images/Facebook.svg"
               className="header-socail-icons"
+              alt="img"
             />
           </li>
           <li className="social-icons">
@@ -99,8 +112,9 @@ const PopupHeader = ({ open, onClose }) => {
 
           <li className="social-icons">
             <img
-              src="assets/images/footer-images/youtube.svg"
+              src="/assets/images/footer-images/youtube.svg"
               className="header-socail-icons"
+              alt="img"
             />
           </li>
         </ul>

@@ -1,0 +1,22 @@
+.loan-row {
+  display: flex;
+  align-items: center;
+  background-color: #cd842f;
+}
+
+.loan-descriptions {
+  padding: 50px 80px;
+}
+
+button.view-detail-btn.bgwhite {
+  color: #c08735;
+  text-align: center;
+  font-family: "Nexa-Medium";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 122%;
+  height: 55px;
+  width: 40%;
+  border: none;
+}

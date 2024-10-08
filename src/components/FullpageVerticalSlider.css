@@ -60,7 +60,7 @@
 }
 
 button.serch-btn-home {
-  background-color: #cd842f;
+  background-color: #c08735;
   height: 44px;
   border: none;
   width: 16%;
@@ -126,15 +126,15 @@ img.city-map-icon {
 
 @media (max-width: 768px) {
   .search-box select {
-    height: 50px !important;
+    background-color: #fff !important;
     border: none;
     border-radius: 0;
-    font-family: "Nexa-Medium";
-    background-color: white !important;
-
+    font-family: Nexa-Medium;
     font-size: 16px;
+    height: 50px !important;
     margin: 0;
     padding: 12px 10px 10px !important;
+    width: 138px !important;
   }
   button.serch-btn-home {
     background-color: #cd842f;
@@ -280,4 +280,229 @@ img.city-map-icon {
 .carousel-control-prev,
 .carousel-control-next {
   display: none !important;
+}
+.expert-form-container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* new css start here  */
+/* FullpageVerticalSlider.css */
+
+.ePzppS {
+  position: relative;
+  height: 58px;
+  width: 100%;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 0px;
+  padding: 0px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 910px;
+  margin: auto;
+}
+
+.ePzppS {
+  position: relative;
+  height: 55px !important;
+}
+
+button.serch-btn-home {
+  background-color: #cd842f;
+  height: 55px !important;
+  border: none;
+  width: 50% !important;
+  color: var(--white, #fff);
+  text-align: center;
+  font-family: "Nexa-Bold", sans-serif;
+  font-size: 14.229px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.search-box input {
+  flex-grow: 1;
+  max-width: 461px;
+  height: 53px !important;
+  margin-left: 0px !important;
+  padding: 0px !important;
+}
+
+.city-map-icon {
+  margin-right: 10px;
+}
+
+/* #citySelect {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  padding: 0;
+  margin-right: 20px;
+  color: #333;
+  cursor: pointer;
+} */
+
+#citySelect option {
+  color: #333;
+  background-color: white;
+}
+
+#citySelect:focus {
+  outline: none;
+}
+
+.search-box form {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.ReactSearchAutocomplete {
+  width: 100%;
+}
+
+.search-box input {
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  flex: 1;
+}
+
+.search-box input:focus {
+  outline: none;
+}
+
+.search-box input {
+  flex-grow: 1;
+  max-width: 461px;
+  height: 53px !important;
+  margin-left: -25px;
+}
+
+.serch-btn-home {
+  background-color: #d99e61;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 0 0px 0px 0;
+  font-size: 16px;
+}
+
+.serch-btn-home:hover {
+  background-color: #b57c3a;
+}
+
+.web-search {
+  display: inline;
+}
+
+.search-icon-mobile {
+  display: none;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .search-box {
+    flex-direction: column;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .home-search-box {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  button.serch-btn-home {
+    background-color: #cd842f;
+    height: 55px !important;
+    border: none;
+    width: 26% !important;
+    color: var(--white, #fff);
+    text-align: center;
+    font-family: "Nexa-Bold", sans-serif;
+    font-size: 14.229px;
+    font-style: normal;
+    border-radius: 0px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-left: 12rem;
+    margin-top: 0rem;
+    position: relative;
+    z-index: 99;
+  }
+
+  .imIGHW {
+    min-height: 44px;
+    width: 81%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+
+  .ePzppS {
+    display: flex;
+    position: relative;
+    height: 46px;
+    width: 311px !important;
+    height: auto !important;
+    flex-direction: column;
+  }
+
+  .city-map-icon {
+    margin: 0;
+  }
+
+  #citySelect {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #dfe1e5;
+  }
+
+  .search-box form {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .ReactSearchAutocomplete {
+    width: 100%;
+  }
+
+  .serch-btn-home {
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .web-search {
+    display: none;
+  }
+
+  .search-icon-mobile {
+    display: inline;
+  }
+}
+
+.ePzppS .wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 0px solid rgb(223, 225, 229);
+  border-radius: 0px !important;
+  background-color: white;
+  color: rgb(33, 33, 33);
+  font-size: 16px;
+  font-family: Arial;
+  z-index: 3;
 }

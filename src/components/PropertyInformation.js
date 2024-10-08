@@ -6,21 +6,24 @@ const PropertyInformation = () => {
       <div className="container">
         <div className="row">
           <div
-            data-aos-delay="1000"
+            data-aos-delay="500"
             data-aos="fade-right"
             // data-aos-offset="100"
             data-aos-easing="ease-in-sine"
             className="col-lg-6"
           >
             <img
-              src="assets/images/property-img-left.png"
+              src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/property-img-left.webp"
               className="property-img"
+              loading="lazy"
               alt="img"
+              width="100%"
+              height="100%"
             />
           </div>
 
           <div
-            data-aos-delay="1000"
+            data-aos-delay="500"
             data-aos="fade-left"
             // data-aos-offset="100"
             data-aos-easing="ease-in-sine"
@@ -38,18 +41,20 @@ const PropertyInformation = () => {
               <div className="crad-grid-container">
                 <div className="card card-project-review">
                   <img
-                    src="assets/images/1property-icon.svg"
+                    src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/1property-icon.svg"
                     className="crad-review-icon"
                     alt="img"
+                    loading="lazy"
                   />
                   <h6 className="since">Since</h6>
                   <h2 className="years">2015</h2>
                 </div>
                 <div className="card card-project-review">
                   <img
-                    src="assets/images/2property-icon.svg"
+                    src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/2property-icon.svg"
                     className="crad-review-icon"
                     alt="img"
+                    loading="lazy"
                   />
                   <h6 className="since">Property Listing</h6>
                   <h2 className="years">20K +</h2>
@@ -57,39 +62,43 @@ const PropertyInformation = () => {
 
                 <div className="card card-project-review">
                   <img
-                    src="assets/images/3property-icon.svg"
+                    src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/3property-icon.svg"
                     className="crad-review-icon"
                     alt="img"
+                    loading="lazy"
                   />
-                  <h6 className="since">Real Estate Advisors</h6>
-                  <h2 className="years">20K +</h2>
+                  <h6 className="since">Real estate projects</h6>
+                  <h2 className="years">10K+</h2>
                 </div>
                 <div className="card card-project-review">
                   <img
-                    src="assets/images/4property-icon.svg"
+                    src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/4property-icon.svg"
                     className="crad-review-icon"
                     alt="img"
+                    loading="lazy"
                   />
                   <h6 className="since">Flats Pan-India</h6>
-                  <h2 className="years">2000</h2>
+                  <h2 className="years">50K+</h2>
                 </div>
                 <div className="card card-project-review">
                   <img
-                    src="assets/images/5property-icon.svg"
+                    src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/5property-icon.svg"
                     className="crad-review-icon"
                     alt="img"
+                    loading="lazy"
                   />
                   <h6 className="since">Branded Developers</h6>
-                  <h2 className="years">1000 +</h2>
+                  <h2 className="years">1000+</h2>
                 </div>
                 <div className="card card-project-review">
                   <img
-                    src="assets/images/6property-icon.svg"
+                    src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/6property-icon.svg"
                     className="crad-review-icon"
                     alt="img"
+                    loading="lazy"
                   />
                   <h6 className="since">Customer Satisfaction</h6>
-                  <h2 className="years">95%</h2>
+                  <h2 className="years">100%</h2>
                 </div>
               </div>
             </div>

@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ContentZoom from "react-content-zoom";
+import { CityIdContext } from "../App";
+import { useNavigate } from "react-router-dom";
+
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -12,7 +14,11 @@ function SampleNextArrow(props) {
       style={{ ...style, display: "block", background: "red" }}
       onClick={onClick}
     >
-      <img src="/assets/images/next-arrow.svg" className="arrow-control" />
+      <img
+        src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/next-arrow.svg"
+        className="arrow-control"
+        alt="Next Arrow"
+      />
     </div>
   );
 }
@@ -26,19 +32,84 @@ function SamplePrevArrow(props) {
       style={{ ...style, display: "block", background: "green" }}
       onClick={onClick}
     >
-      <img src="/assets/images/prev-icon.svg" className="arrow-control" />
+      <img
+        src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/prev-icon.svg"
+        className="arrow-control"
+        alt="Prev Arrow"
+      />
     </div>
   );
 }
 
-const OurupcomingLaunch = () => {
-  var settings = {
+const OurupcomingLaunch = ({ upcommingdata }) => {
+  const slugify = (text) => {
+    return text
+      .toString()
+      .toLowerCase()
+      .replace(/\s+/g, "-") // Replace spaces with -
+      .replace(/[^\w\-]+/g, "") // Remove all non-word chars
+      .replace(/\-\-+/g, "-") // Replace multiple - with single -
+      .replace(/^-+/, "") // Trim - from start of text
+      .replace(/-+$/, ""); // Trim - from end of text
+  };
+
+  const { cityId } = useContext(CityIdContext);
+  const [topupcomingProjects, setTopupcomingProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchTopUpcomingProjects = async () => {
+      setLoading(true);
+      try {
+        if (upcommingdata) {
+          setTopupcomingProjects(upcommingdata);
+          setError(null);
+        } else {
+          setError("No upcoming projects found.");
+        }
+      } catch (error) {
+        console.error("Error fetching upcoming projects:", error);
+        setError("Error fetching upcoming projects. Please try again later.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchTopUpcomingProjects();
+  }, [upcommingdata]);
+
+  const formatPriceRange = (priceRange) => {
+    if (!priceRange) return "- Call for price";
+
+    const match = priceRange.match(/(\d+)-(\d+) Lac/);
+
+    if (!match) return "- Call for price";
+
+    const [_, minPrice, maxPrice] = match;
+
+    const formatPrice = (price) => {
+      const numberPrice = parseFloat(price);
+
+      if (numberPrice >= 10000000) {
+        const crores = numberPrice / 10000000;
+        return crores.toFixed(crores >= 10 ? 1 : 2) + " Cr";
+      } else {
+        const lacs = numberPrice / 100000;
+        return lacs.toFixed(lacs >= 10 ? 1 : 2) + " Lac";
+      }
+    };
+
+    return `${formatPrice(minPrice)} - ${formatPrice(maxPrice)}`;
+  };
+
+  const slicedProjects = topupcomingProjects.slice(0, 12);
+
+  const settings = {
     dots: false,
-    arrow: true,
+    arrows: true,
     infinite: true,
-    // autoplay: true,
-    // autoplaySpeed: 1000,
-    // speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
@@ -53,11 +124,19 @@ const OurupcomingLaunch = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
     ],
   };
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>{error}</div>;
+  }
 
   return (
     <div className="section-upcoming-projects">
@@ -65,200 +144,65 @@ const OurupcomingLaunch = () => {
         <h2 className="slider-heading text-white">Upcoming New Launch</h2>
 
         <Slider {...settings}>
-          <div className="card slider-upcoming-projects-cards">
-            <img
-              src="assets/images/up-slide-1.png"
-              className="slider-top-card upcoming-launch-card-img"
-            />
-            <div className="card-body">
-              <div className="bg-slider-img-card">
-                <h6 className="text-white pb-0 upcoming-title">
-                  Swathi Prashanthi Apartments at Adyar,..
-                </h6>
-                <span className="builder-name">By Sridhar Construction</span>
-                <p className="text-white pricing-upcoming">
-                  Price 35 Lac-37.5 Lac
-                </p>
-                <li style={{ color: "#B1B0B0" }} class="loction-list ">
-                  <img
-                    src="/assets/images/map-icon.svg"
-                    alt="img"
-                    class="map-location-icon"
-                  />
-                  &nbsp; At Adyar, Chennai, Tamil Nadu, India, Mumbai
-                </li>
-              </div>
-            </div>
-          </div>
-          <div className="card slider-upcoming-projects-cards">
-            <img
-              src="assets/images/up-slide-2.png"
-              className="slider-top-card upcoming-launch-card-img"
-            />
-            <div className="card-body">
-              <div className="bg-slider-img-card">
-                <h6 className="text-white pb-0 upcoming-title">
-                  Swathi Prashanthi Apartments at Adyar,..
-                </h6>
-                <span className="builder-name">By Sridhar Construction</span>
-                <p className="text-white pricing-upcoming">
-                  Price 35 Lac-37.5 Lac
-                </p>
-                <li style={{ color: "#B1B0B0" }} class="loction-list ">
-                  <img
-                    src="/assets/images/map-icon.svg"
-                    alt="img"
-                    class="map-location-icon"
-                  />
-                  &nbsp; At Adyar, Chennai, Tamil Nadu, India, Mumbai
-                </li>
-              </div>
-            </div>
-          </div>
-
-          <div className="card slider-upcoming-projects-cards">
-            <img
-              src="assets/images/up-slide-3.png"
-              className="slider-top-card upcoming-launch-card-img"
-            />
-            <div className="card-body">
-              <div className="bg-slider-img-card">
-                <h6 className="text-white pb-0 upcoming-title">
-                  Swathi Prashanthi Apartments at Adyar,..
-                </h6>
-                <span className="builder-name">By Sridhar Construction</span>
-                <p className="text-white pricing-upcoming">
-                  Price 35 Lac-37.5 Lac
-                </p>
-                <li style={{ color: "#B1B0B0" }} class="loction-list ">
-                  <img
-                    src="/assets/images/map-icon.svg"
-                    alt="img"
-                    class="map-location-icon"
-                  />
-                  &nbsp; At Adyar, Chennai, Tamil Nadu, India, Mumbai
-                </li>
-              </div>
-            </div>
-          </div>
-
-          <div className="card slider-upcoming-projects-cards">
-            <img
-              src="assets/images/up-slide-1.png"
-              className="slider-top-card upcoming-launch-card-img"
-            />
-            <div className="card-body">
-              <div className="bg-slider-img-card">
-                <h6 className="text-white pb-0 upcoming-title">
-                  Swathi Prashanthi Apartments at Adyar,..
-                </h6>
-                <span className="builder-name">By Sridhar Construction</span>
-                <p className="text-white pricing-upcoming">
-                  Price 35 Lac-37.5 Lac
-                </p>
-                <li style={{ color: "#B1B0B0" }} class="loction-list ">
-                  <img
-                    src="/assets/images/map-icon.svg"
-                    alt="img"
-                    class="map-location-icon"
-                  />
-                  &nbsp; At Adyar, Chennai, Tamil Nadu, India, Mumbai
-                </li>
-              </div>
-            </div>
-          </div>
-
-          <div className="card slider-upcoming-projects-cards">
-            <ContentZoom
-              zoomPercent={350}
-              largeImageUrl="assets/images/up-slide-2.png"
-              imageUrl="assets/images/up-slide-2.png"
-              contentHeight={300}
-              contentWidth={500}
+          {slicedProjects.map((project, idx) => (
+            <div
+              key={idx}
+              style={{ cursor: "pointer" }}
+              onClick={() =>
+                navigate(
+                  `/property-detail/${project.id}/${slugify(project.title)}`
+                )
+              }
             >
-              <img
-                src="assets/images/up-slide-2.png"
-                className="slider-top-card upcoming-launch-card-img"
-                alt="Project Image"
-              />
-            </ContentZoom>
-            {/* 
-            <img
-              src="assets/images/up-slide-2.png"
-              className="slider-top-card upcoming-launch-card-img"
-            /> */}
-            <div className="card-body">
-              <div className="bg-slider-img-card">
-                <h6 className="text-white pb-0 upcoming-title">
-                  Swathi Prashanthi Apartments at Adyar,..
-                </h6>
-                <span className="builder-name">By Sridhar Construction</span>
-                <p className="text-white pricing-upcoming">
-                  Price 35 Lac-37.5 Lac
-                </p>
-                <li style={{ color: "#B1B0B0" }} class="loction-list ">
+              <div key={project.id} className="upcoming-projects">
+                <div className="card slider-upcoming-projects-cards">
                   <img
-                    src="/assets/images/map-icon.svg"
-                    alt="img"
-                    class="map-location-icon"
+                    src={project.image || "/assets/images/up-slide-1.png"}
+                    className="slider-top-card upcoming-launch-card-img"
+                    alt={project.title}
+                    loading="lazy"
                   />
-                  &nbsp; At Adyar, Chennai, Tamil Nadu, India, Mumbai
-                </li>
+                </div>
+                <div className="card-body" style={{ paddingTop: "20px" }}>
+                  <div className="bg-slider-img-card">
+                    <h6 className="text-white pb-0 upcoming-title">
+                      {project.title}
+                    </h6>
+                    <span className="builder-name">
+                      By {project.developer_name}
+                    </span>
+                    <p className="text-white pricing-upcoming">
+                      Price {formatPriceRange(project.price)}
+                    </p>
+                    <li style={{ color: "#B1B0B0" }} className="loction-list">
+                      <img
+                        src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/map-icon.svg"
+                        alt="img"
+                        className="map-location-icon"
+                        loading="lazy"
+                      />
+                      &nbsp; {project.address}
+                    </li>
+                    {project.rera_no && project.rera_no.trim() !== "" && (
+                      <li
+                        className="loction-list"
+                        style={{ paddingTop: "10px " }}
+                      >
+                        <p
+                          className=" pt-2 pb-2 pl-2 rera-no"
+                          style={{
+                            color: "#c08735",
+                          }}
+                        >
+                          RERA ID - {project.rera_no}
+                        </p>
+                      </li>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="card slider-upcoming-projects-cards">
-            <img
-              src="assets/images/up-slide-3.png"
-              className="slider-top-card upcoming-launch-card-img"
-            />
-            <div className="card-body">
-              <div className="bg-slider-img-card">
-                <h6 className="text-white pb-0 upcoming-title">
-                  Swathi Prashanthi Apartments at Adyar,..
-                </h6>
-                <span className="builder-name">By Sridhar Construction</span>
-                <p className="text-white pricing-upcoming">
-                  Price 35 Lac-37.5 Lac
-                </p>
-                <li style={{ color: "#B1B0B0" }} class="loction-list ">
-                  <img
-                    src="/assets/images/map-icon.svg"
-                    alt="img"
-                    class="map-location-icon"
-                  />
-                  &nbsp; At Adyar, Chennai, Tamil Nadu, India, Mumbai
-                </li>
-              </div>
-            </div>
-          </div>
-
-          <div className="card slider-upcoming-projects-cards">
-            <img
-              src="assets/images/up-slide-3.png"
-              className="slider-top-card upcoming-launch-card-img"
-            />
-            <div className="card-body">
-              <div className="bg-slider-img-card">
-                <h6 className="text-white pb-0 upcoming-title">
-                  Swathi Prashanthi Apartments at Adyar,..
-                </h6>
-                <span className="builder-name">By Sridhar Construction</span>
-                <p className="text-white pricing-upcoming">
-                  Price 35 Lac-37.5 Lac
-                </p>
-                <li style={{ color: "#B1B0B0" }} class="loction-list ">
-                  <img
-                    src="/assets/images/map-icon.svg"
-                    alt="img"
-                    class="map-location-icon"
-                  />
-                  &nbsp; At Adyar, Chennai, Tamil Nadu, India, Mumbai
-                </li>
-              </div>
-            </div>
-          </div>
+          ))}
         </Slider>
       </div>
     </div>

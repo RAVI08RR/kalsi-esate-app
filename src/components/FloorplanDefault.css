@@ -1,0 +1,61 @@
+/* FloorplanDefault.css */
+
+button.btn.btn-outline-dark.custom-btn {
+  background-color: #c08835;
+  border-radius: 0px;
+  border: none;
+  color: white;
+  font-family: "Nexa-Medium";
+  font-size: 14.5px;
+}
+
+.floorplan-card {
+  position: relative;
+  text-align: center;
+  border: 1px solid #c08935;
+}
+
+.floorplan-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: blur(1.8px);
+}
+
+.floorplan-title {
+  background-color: #c08835;
+  color: white;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: -5px;
+}
+
+.overlay-equiery-btn-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 99;
+}
+
+.floorplan-card:hover .overlay-equiery-btn-section {
+  opacity: 1;
+}
+
+.enquire-btn {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14.5px !important;
+  font-family: "Nexa-Medium";
+}

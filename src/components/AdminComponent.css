@@ -1,0 +1,90 @@
+.admin-container {
+  display: flex;
+  height: 100vh;
+}
+
+button.delete-btn {
+  width: max-content;
+  height: 55px;
+  background-color: transparent;
+  border-color: red;
+  padding: 0px 19px;
+  color: #dc3545 !important;
+}
+
+.watchlist {
+  flex: 1 1;
+  padding: 4px;
+  overflow-y: auto;
+  background-color: #fafafa;
+}
+
+.watchlist {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+/* watchlist -item css  */
+
+.watchlist-item {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 4px;
+  border: none;
+  border-radius: 0px;
+}
+
+.watchlist-item-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.watchlist-item-info {
+  flex: 1;
+}
+
+.watchlist-item-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rea-id,
+.price {
+  font-weight: bold;
+}
+
+.watchlist-item-title {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.location,
+.builder,
+.details {
+  margin: 5px 0;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+.view-details,
+.delete {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.view-details {
+  background: #007bff;
+  color: #fff;
+}
+
+.delete {
+  background: #dc3545;
+  color: #fff;
+}

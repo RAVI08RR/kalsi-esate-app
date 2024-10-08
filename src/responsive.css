@@ -1,0 +1,323 @@
+@media screen and (min-width: 350px) and (max-width: 426px) {
+  .property-card {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .property-banner {
+    height: 200px !important;
+    margin: 0 auto;
+  }
+  .properties-mapper {
+    display: flex;
+    justify-content: center;
+  }
+  .search-result-mapper {
+    display: flex;
+    align-items: center;
+    background-color: #df2828;
+  }
+  .property-address {
+    font-size: 12px;
+    font-family: "Red Hat Display";
+    flex-direction: column;
+    align-items: center;
+  }
+  .property-address {
+    font-size: 12px;
+  }
+  .property-builder-name {
+    font-size: 12px;
+    /* padding-bottom: 5px; */
+    font-family: "Red Hat Display";
+  }
+  .property-title {
+    font-size: 18px;
+  }
+  .property-card-container {
+    padding-left: 2px;
+  }
+  .property-info {
+    padding: 0 !important;
+    padding-top: 10px !important;
+  }
+  .property-rera-id {
+    font-size: 16px;
+  }
+  /* .property-type-mobile{
+        display: none !important;
+    } */
+  /* button.details-btn{
+        width: 100%;
+    } */
+  /* ul.property-type{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    } */
+  /* .info-item{
+        width: 100px !important;
+        display: flex;
+        align-items: center !important;
+        justify-content: center !important;
+    } */
+  .property-info-container {
+    width: 100%;
+    height: 50px;
+    /* background-color: #e6a119; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .info-box {
+    width: 32.5%;
+    height: 70%;
+    background-color: #faf3e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .property-type-1 {
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  .property-bhk {
+    font-size: 12px;
+    margin-left: 2px;
+  }
+  .property-carpet-area {
+    font-size: 12px;
+  }
+  .property-info-mobile {
+    display: none !important;
+  }
+  .buttons-container {
+    width: 100%;
+    height: 70px;
+    /* background-color: #f32b2b; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    /* margin-bottom: ; */
+  }
+  .property-info-container {
+    width: 100%;
+    height: 50px;
+    /* background-color: #e6a119; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .info-box {
+    width: 32.5%;
+    height: 70%;
+    background-color: #faf3e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .property-type-1 {
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  .property-bhk {
+    font-size: 12px;
+    margin-left: 2px;
+  }
+  .property-carpet-area {
+    font-size: 12px;
+  }
+  .property-info-mobile {
+    display: none !important;
+  }
+  .details-btn {
+    width: 50%;
+    background-color: #c08735;
+    outline: none;
+    color: white;
+    font-weight: 400;
+    height: 50px;
+    border: none;
+    font-family: "Nexa-Medium";
+  }
+  .expert-btn {
+    width: 45%;
+    border: 2px solid #c08735;
+    background-color: transparent;
+    color: #c08735;
+  }
+  .filters-mobile {
+    display: none;
+  }
+  .filters-container {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    /* background-color: #db1f1f; */
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .filter-select-size {
+    width: 110px;
+  }
+  .filter-select-size select {
+    font-size: 16px;
+  }
+  .filter-select-carpet {
+    width: 135px;
+  }
+  .filter-select-price {
+    width: 130px;
+  }
+  .filters-bg {
+    padding-bottom: 20px;
+  }
+  .property-rera-id {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 376px) {
+  .property-card {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .property-banner {
+    height: 200px !important;
+    margin: 0 auto;
+  }
+  .properties-mapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .property-address {
+    font-size: 12px;
+    font-family: "Red Hat Display";
+  }
+  .property-builder-name {
+    font-size: 12px;
+    /* padding-bottom: 5px; */
+    font-family: "Red Hat Display";
+  }
+  .property-builder-name {
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+  .property-title {
+    font-size: 18px;
+  }
+  .property-card-container {
+    padding-left: 2px;
+  }
+  .property-info {
+    padding: 0 !important;
+    padding-top: 10px !important;
+  }
+  .property-rera-id {
+    font-size: 16px;
+  }
+  .property-info-container {
+    width: 100%;
+    height: 50px;
+    /* background-color: #e6a119; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .info-box {
+    width: 32.5%;
+    height: 70%;
+    background-color: #faf3e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .property-type-1 {
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 10px;
+  }
+  .property-bhk {
+    font-size: 10px;
+    margin-left: 2px;
+  }
+  .property-carpet-area {
+    font-size: 10px;
+  }
+  .property-info-mobile {
+    display: none !important;
+  }
+  .buttons-container {
+    width: 100%;
+    height: 70px;
+    /* background-color: #f32b2b; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    /* margin-bottom: ; */
+  }
+  .details-btn {
+    width: 50%;
+    background-color: #c08735;
+    outline: none;
+    color: white;
+    font-weight: 400;
+    height: 50px;
+    border: none;
+    font-family: "Nexa-Medium";
+  }
+  .expert-btn {
+    width: 45%;
+    border: 2px solid #c08735;
+    background-color: transparent;
+    color: #c08735;
+    font-size: 12px;
+  }
+  .property-info-mobile {
+    display: none !important;
+  }
+  .filters-mobile {
+    display: none;
+  }
+  .filters-container {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    /* background-color: #db1f1f; */
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .filter-select-size {
+    width: 110px;
+  }
+  .filter-select-size select {
+    font-size: 16px;
+  }
+  .filter-select-carpet {
+    width: 135px;
+  }
+  .filter-select-price {
+    width: 130px;
+  }
+  .filters-bg {
+    padding-bottom: 20px;
+  }
+}
+
+/* responsive css  */

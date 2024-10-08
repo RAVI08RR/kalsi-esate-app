@@ -1,0 +1,23 @@
+.icon-box-about {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+.card.mission-card.h-100.border-0 {
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #faf3e0;
+  padding: 36px;
+  border-radius: 0px;
+}
+
+.icon-box-about .icon img {
+  width: 150px;
+  height: 150px;
+}
+
+.content-mission-vission {
+  text-align: justify;
+}

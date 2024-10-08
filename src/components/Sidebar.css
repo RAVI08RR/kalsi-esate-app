@@ -1,0 +1,30 @@
+.sidebar {
+  width: 162px;
+  background: #0c0c0c;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px;
+  margin-top: 0rem;
+  padding-top: 53px;
+}
+
+.sidebar-item {
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 14px;
+}
+.sidebar-item a {
+  text-decoration: none;
+}
+
+.sidebar-item.active {
+  background: #c08835;
+  padding: 14px;
+}
+
+.icon-admin-menu {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}

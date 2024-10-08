@@ -1,3 +1,22 @@
-<svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.98971 -2.22325e-05C5.18707 -2.22325e-05 5.37998 0.0644775 5.54406 0.185177C5.70814 0.305977 5.83602 0.477478 5.91154 0.678177C5.98706 0.878977 6.00682 1.09981 5.96833 1.3129C5.92984 1.52599 5.83482 1.72173 5.69529 1.87537L2.40891 5.49323L5.69529 9.11108C5.79061 9.21243 5.86664 9.33366 5.91895 9.4677C5.97125 9.60174 5.99878 9.74591 5.99993 9.89178C6.00108 10.0377 5.97583 10.1823 5.92565 10.3173C5.87547 10.4524 5.80137 10.575 5.70766 10.6782C5.61396 10.7813 5.50253 10.8629 5.37988 10.9182C5.25723 10.9734 5.12582 11.0012 4.99331 10.9999C4.86079 10.9987 4.72984 10.9684 4.60808 10.9108C4.48632 10.8532 4.3762 10.7695 4.28413 10.6646L0.29217 6.26998C0.10507 6.06395 -3.016e-05 5.78455 -3.016e-05 5.49323C-3.016e-05 5.20191 0.10507 4.92251 0.29217 4.71648L4.28413 0.321878C4.47125 0.115878 4.72505 7.77675e-05 4.98971 -2.22325e-05Z" fill="#C08735"/>
+<svg width="24" height="39" viewBox="0 0 24 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_3609_395)">
+<g filter="url(#filter0_d_3609_395)">
+<path d="M18.5017 2L20 3.9975L7.9966 20L20 36.0025L18.5017 38L5 20L18.5017 2Z" fill="#C08735"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_3609_395" x="-2" y="-1" width="29" height="50" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="3.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3609_395"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3609_395" result="shape"/>
+</filter>
+<clipPath id="clip0_3609_395">
+<rect width="24" height="39" fill="white" transform="translate(24 39) rotate(-180)"/>
+</clipPath>
+</defs>
 </svg>

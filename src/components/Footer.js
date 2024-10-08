@@ -1,285 +1,196 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Newsletercomponet from "./Newsletercomponet";
+import { allcitiesprojects } from "../apis/callbacks";
+import { useNavigate } from "react-router-dom";
 
-const Footer = () => {
+const Footer = ({ cities }) => {
+  const navigate = useNavigate();
+  // const [cities, setCities] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchCities = async () => {
+  //     try {
+  //       const citylist = await allcitiesprojects();
+  //       setCities(citylist.locations);
+  //     } catch (error) {
+  //       console.error("Error fetching cities:", error);
+  //     }
+  //   };
+  //   fetchCities();
+  // }, []);
+
+  const handleNavigation = (url, state) => {
+    // Navigate to the new page with the given state
+    navigate(url, { state });
+
+    // Perform actions after navigation
+    setTimeout(() => {
+      // Scroll to the top smoothly
+      // window.location.reload();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      // Reload the page after scrolling is initiated
+    }, 40); // Adjust this timeout as needed
+  };
+
   return (
     <footer className="text-white py-5 footer-bg-img">
-      <div className="container ">
+      <div className="container">
         <div className="row">
           <div className="col-lg-3 footer-menu-border">
-            <h5 className="footer-menu-head">REAL ESTATE</h5>
+            <h5 className="footer-menu-head">New Launch Properties</h5>
             <ul className="list-unstyled">
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Real Estate Brokerage
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Bulk Real Estate
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Rental Agreement
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Broker Hire
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Brokerage Form
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Commercial Real Estate
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Residential Real Estate
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Mortgage Real Estate
-                </a>
-              </li>
+              {cities.map((city) => (
+                <li key={city.id}>
+                  <a
+                    target="_blank"
+                    onClick={() =>
+                      handleNavigation(`/new-launchs/${city.id}`, {
+                        cityId: city.id,
+                        cityName: city.location,
+                      })
+                    }
+                    className="text-white footer-nav-links"
+                  >
+                    New Launch in {city.location}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="col-lg-3 footer-menu-border">
-            <h5 className="footer-menu-head">BUY PROPERTY</h5>
+            <h5 className="footer-menu-head">Residential Properties</h5>
             <ul className="list-unstyled">
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Buy Property in Patna
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Buy Property in Mumbai
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Buy Property in Kolkata
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Buy Property in Indore
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Buy Property in Bhopal
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Buy Property in Lucknow
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Buy Property in Noida
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Buy Property in Ahmedabad
-                </a>
-              </li>
+              {cities.map((city, idx) => (
+                <li key={idx}>
+                  <a
+                    onClick={() =>
+                      handleNavigation(
+                        `/residential-projects-list/${city.id}`,
+                        {
+                          cityId: city.id,
+                          cityName: city.location,
+                        }
+                      )
+                    }
+                    className="text-white footer-nav-links"
+                  >
+                    Residential Properties in {city.location}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="col-lg-3 footer-menu-border">
-            <h5 className="footer-menu-head">RESIDENTIAL PROJECT</h5>
+            <h5 className="footer-menu-head">Commercial Properties</h5>
             <ul className="list-unstyled">
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Project in Delhi
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Project in Gurgaon
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Project in Noida
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Project in Mumbai
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Project in Chennai
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Project in Bangalore
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Project in Hyderabad
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Project in Kolkata
-                </a>
-              </li>
+              {cities.map((city) => (
+                <li key={city.id}>
+                  <a
+                    onClick={() =>
+                      handleNavigation(`/commercial-projects-list/${city.id}`, {
+                        cityId: city.id,
+                        cityName: city.location,
+                      })
+                    }
+                    className="text-white footer-nav-links"
+                  >
+                    Commercial Properties in {city.location}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="col-lg-3 footer-menu-border last-list">
-            <h5 className="footer-menu-head">FLATS FOR SALE</h5>
+            <h5 className="footer-menu-head">Plots FOR SALE</h5>
             <ul className="list-unstyled">
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Flats in Delhi
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Flats in Gurgaon
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Flats in Noida
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Flats in Mumbai
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Flats in Chennai
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Flats in Bangalore
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Flats in Hyderabad
-                </a>
-              </li>
-              <li>
-                <a className="text-white footer-nav-links" href="#">
-                  Flats in Kolkata
-                </a>
-              </li>
+              {cities.map((city) => (
+                <li key={city.id}>
+                  <a
+                    onClick={() =>
+                      handleNavigation(`/plots-projects-list/${city.id}`, {
+                        cityId: city.id,
+                        cityName: city.location,
+                      })
+                    }
+                    className="text-white footer-nav-links"
+                  >
+                    Plots in {city.location}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
+
         <div className="row mt-4">
-          <div className="col-lg-4">
+          <div className="col-lg-4 logo-box-footer">
             <a href="#" className="navbar-brand">
               <img
-                src="/assets/images/Logo-main.svg"
+                src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/Logo-main.svg"
                 alt="Kalsi Estate Logo"
                 className="img-logo-footer"
+                width="200"
+                height="35.103px"
               />
             </a>
             <div>
-              <h5 className="footer-menu-head">NEWSLETTER SIGNUP</h5>
-              <div className="input-group footer-newsleter-section">
-                <img
-                  src="/assets/images/footer-images/footer-email-icon.svg"
-                  className="newsletter-email-icon"
-                  alt=""
-                />
-                <input
-                  type="email"
-                  className="form-control newsletter-input"
-                  placeholder="Enter your email address"
-                />
-                <button className="btn btn-primary bg-transperent arrow-btn">
-                  <img
-                    src="/assets/images/footer-images/send-arrow.svg"
-                    className="newsletter-arrow-btn-icon"
-                    alt="img"
-                  />
-                </button>
-              </div>
+              <Newsletercomponet />
             </div>
           </div>
           <div className="col-lg-2">
             <h5 className="footer-menu-head">PROPERTIES IN INDIA</h5>
             <ul className="list-unstyled">
-              <li className="footer-properties">
-                <a className="text-white footer-nav-links" href="#">
-                  Delhi
-                </a>
-              </li>
-              <li className="footer-properties">
-                <a className="text-white footer-nav-links" href="#">
-                  Noida
-                </a>
-              </li>
-              <li className="footer-properties">
-                <a className="text-white footer-nav-links" href="#">
-                  Pune
-                </a>
-              </li>
-              <li className="footer-properties">
-                <a className="text-white footer-nav-links" href="#">
-                  Mumbai
-                </a>
-              </li>
-              <li className="footer-properties">
-                <a className="text-white footer-nav-links" href="#">
-                  Gurgaon
-                </a>
-              </li>
-              <li className="footer-properties">
-                <a className="text-white footer-nav-links" href="#">
-                  Others
-                </a>
-              </li>
+              {cities.map((city) => (
+                <li className="footer-properties" key={city.id}>
+                  <a
+                    className="text-white footer-nav-links"
+                    // href="/city-detail/delhi/2"
+
+                    onClick={() =>
+                      handleNavigation(
+                        `/city-detail/${city.location}/${city.id}`,
+                        {
+                          state: { cityId: city.id, cityName: city.location },
+                        }
+                      )
+                    }
+                  >
+                    {city.location}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="col-lg-2">
             <h5 className="footer-menu-head">Quick Links</h5>
             <ul className="list-unstyled">
               <li className="footer-properties">
-                <a className="text-white footer-nav-links" href="#">
+                <a className="text-white footer-nav-links" href="/about-us">
                   About us
                 </a>
               </li>
               <li className="footer-properties">
-                <a className="text-white footer-nav-links" href="#">
+                <a className="text-white footer-nav-links" href="/home-loan">
                   Loan
                 </a>
               </li>
               <li className="footer-properties">
-                <a className="text-white footer-nav-links" href="#">
+                <a className="text-white footer-nav-links" href="/contact-us">
                   Contact us
                 </a>
               </li>
 
               <li className="footer-properties">
-                <a className="text-white footer-nav-links" href="#">
-                  Terms of use
+                <a
+                  className="text-white footer-nav-links"
+                  href="/terms-condition"
+                >
+                  Terms and Conditions
                 </a>
               </li>
               <li className="footer-properties">
-                <a className="text-white footer-nav-links" href="#">
-                  Privacy Policy
+                <a className="text-white footer-nav-links" href="/Desclaimer">
+                  Disclaimer
                 </a>
               </li>
             </ul>
@@ -288,13 +199,17 @@ const Footer = () => {
             <h5 className="footer-menu-head">GET IN TOUCH</h5>
             <ul className="list-unstyled footer-get-in-touch">
               <li>
-                <a className="text-white footer-nav-links" href="#">
+                <a className="text-white footer-nav-links" href="/contact-us">
                   <img
-                    src="/assets/images/footer-images/pin.svg"
+                    src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/footer-images/pin.svg"
                     className="footer-socails-links-icons"
                   />
-                  2/A,702, Dheeraj Upvan II, W.E. Highway, Borivali(E),
-                  Mumbai-400046
+                  2/A,702, Dheeraj Upvan II, W.E. Highway,
+                  <br className="br-none-md"></br>
+                  <span className="footer-address-sec">
+                    {" "}
+                    Borivali(E), Mumbai-400046
+                  </span>
                 </a>
               </li>
 
@@ -304,7 +219,7 @@ const Footer = () => {
                   href="mailto:info@kalsiestate.com"
                 >
                   <img
-                    src="/assets/images/footer-images/email.svg"
+                    src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/footer-images/email.svg"
                     className="footer-socails-links-icons"
                   />
                   info@kalsiestate.com
@@ -312,30 +227,41 @@ const Footer = () => {
               </li>
 
               <li>
-                <a className="text-white footer-nav-links" href="#">
+                <a
+                  className="text-white footer-nav-links"
+                  href="tel:+917400138561"
+                >
                   <img
-                    src="/assets/images/footer-images/phone.svg"
+                    src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/footer-images/phone.svg"
                     className="footer-socails-links-icons"
                   />
                   +91 7400138561
                 </a>
               </li>
             </ul>
-
             <div className="mt-3 footer-socail-icons-container">
               <button className="btn-social-icons">
-                <a href="#" className="social-icons-footer">
+                <a
+                  target="_blank"
+                  href="https://www.youtube.com/channel/UCU1XfOJ-U_XeePncXMT4EIg"
+                  className="social-icons-footer"
+                >
                   <img
-                    src="/assets/images/footer-images/youtube.svg"
+                    target="_blank"
+                    src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/footer-images/youtube.svg"
                     alt="Facebook"
                     className="social-icons-footer-img"
                   />
                 </a>
               </button>
               <button className="btn-social-icons">
-                <a href="#" className="social-icons-footer">
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/kalsiestate21"
+                  className="social-icons-footer"
+                >
                   <img
-                    src="/assets/images/footer-images/Facebook.svg"
+                    src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/footer-images/Facebook.svg"
                     alt="Facebook"
                     className="social-icons-footer-img"
                   />
@@ -343,9 +269,13 @@ const Footer = () => {
               </button>
 
               <button className="btn-social-icons">
-                <a href="#" className="social-icons-footer">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/kalsiestate/"
+                  className="social-icons-footer"
+                >
                   <img
-                    src="/assets/images/footer-images/instagram.svg"
+                    src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/footer-images/instagram.svg"
                     alt="Facebook"
                     className="social-icons-footer-img"
                   />
@@ -353,9 +283,13 @@ const Footer = () => {
               </button>
 
               <button className="btn-social-icons">
-                <a href="#" className="social-icons-footer">
+                <a
+                  target="_blank"
+                  href="https://x.com/kalsiestate"
+                  className="social-icons-footer"
+                >
                   <img
-                    src="/assets/images/footer-images/twiteer.svg"
+                    src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/footer-images/twiteer.svg"
                     alt="Facebook"
                     className="social-icons-footer-img"
                   />

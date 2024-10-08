@@ -43,7 +43,7 @@ const PopupmenuMobile = ({ open, onClose }) => {
             onClick={onClose}
             aria-label="Close drawer"
           >
-            <img src="assets/images/cross-icon.svg" />
+            <img src="/assets/images/cross-icon.svg" />
           </button>
         </li>
       </ul>
@@ -58,20 +58,44 @@ const PopupmenuMobile = ({ open, onClose }) => {
 
       <ul className="menu-container">
         <a className="text-black-nav" href="/">
+          <li className="nav-link-btn">Home</li>
+        </a>
+
+        <a className="text-black-nav" href="/new-launch">
           <li className="nav-link-btn">New Launch</li>
         </a>
-        <a className="text-black-nav" href="#">
-          <li className="nav-link-btn ">Projects</li>
+
+        <a className="text-black-nav" href="/residential-projects">
+          <li className="nav-link-btn ">Residential</li>
         </a>
-        <a className="text-black-nav" href="#">
+
+        <a className="text-black-nav" href="/commercial-Projects">
+          <li className="nav-link-btn ">Commercial</li>
+        </a>
+        <a className="text-black-nav" href="/plots">
+          <li className="nav-link-btn ">Plots</li>
+        </a>
+
+        <a className="text-black-nav" href="/hot-projects">
           <li className="nav-link-btn "> Hot Projects</li>
         </a>
 
-        <a className="text-black-nav" href="#">
+        <a className="text-black-nav" href="/top-builder">
+          <li className="nav-link-btn ">Top Builders</li>
+        </a>
+        <a className="text-black-nav" href="/about-us">
+          <li className="nav-link-btn "> About Us</li>
+        </a>
+
+        <a className="text-black-nav" href="/blog-list">
+          <li className="nav-link-btn "> News and Blogs</li>
+        </a>
+
+        <a className="text-black-nav" href="/home-loan">
           <li className="nav-link-btn">Loans</li>
         </a>
-        <a className="text-black-nav contact-btn" href="#">
-          <li className="contact-list">Contact</li>
+        <a className="text-black-nav contact-btn" href="/contact-us">
+          <li className="contact-list">Contact us</li>
         </a>
       </ul>
 
