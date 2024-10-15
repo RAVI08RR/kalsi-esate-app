@@ -37,6 +37,7 @@ const DownloadappSection = () => {
                     className="play-store-icon"
                     width="100%"
                     height="100%"
+                    loading="lazy"
                   />
                   Google Play
                 </button>
@@ -51,6 +52,7 @@ const DownloadappSection = () => {
                     className="play-store-icon"
                     width="100%"
                     height="100%"
+                    loading="lazy"
                   />
                   Apple Store
                 </button>

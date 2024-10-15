@@ -198,6 +198,7 @@ const Header = ({ showBg, cityName, cities }) => {
             src={logoSrc}
             className={logoClass}
             alt="Logo"
+            loading="lazy"
             // src={
             //   scroll && currentPath === "/"
             //     ? "/assets/images/Logo-main.svg" // Scroll logo
@@ -241,6 +242,7 @@ const Header = ({ showBg, cityName, cities }) => {
               src={toggleSrc}
               className={`menu-icon-toggle ${toggleClass}`}
               alt="menu-icon"
+              loading="lazy"
             />
             {/* <img
               // src="/assets/images/menu-icon.svg"

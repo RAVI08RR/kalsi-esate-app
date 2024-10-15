@@ -1,20 +1,15 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
-import "./FullpageVerticalSlider.css";
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
+import { CityIdContext, CityNameContext } from "../App";
 import {
-  allcitiesprojects,
   getHomeBannerContent,
   getHomepageBanners,
-  // highlightedProjects,
-  // topUpcomingProjects,
-  fetchData,
   searchProjects,
 } from "../apis/callbacks";
-import { CitiesContext, CityIdContext, CityNameContext } from "../App";
-import { useLocation, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { storeCitiesList } from "../redux/actions";
+import "./FullpageVerticalSlider.css";
 
 const MAX_SUGGESTIONS = 2; // Constant for max number of suggestions
 

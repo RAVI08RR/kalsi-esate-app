@@ -1,73 +1,52 @@
 import React, { createContext, useEffect, useState } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
-import { debounce } from "lodash"; // Make sure to install lodash
-import Home from "./components/Home";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import PropertyDetailpage from "./pages/PropertyDetailpage";
-import Projectlistpage from "./pages/Projectlistpage";
-import HomeLoanpage from "./pages/HomeLoanpage";
-import Aboutuspage from "./pages/Aboutuspage";
-import Contactuspage from "./pages/Contactuspage";
-import Preloader from "./components/Preloader";
-import InnerPageLoader from "./components/InnerPageLoader";
-import BlogDetailpage from "./pages/BlogDetailpage";
-import RelatedPostpage from "./pages/RelatedPostpage";
-import Residentialprojectspage from "./pages/Residentialprojectspage";
-import CommercialProjectspage from "./pages/CommercialProjectspage";
-import Plotsprojectspage from "./pages/Plotsprojectspage";
-import Hotprojectspage from "./pages/Hotprojectspage";
-import BuilderDetailpage from "./pages/BuilderDetailpage";
-import SearchResultsPage from "./pages/SearchResultsPage";
-import CityDetailpage from "./pages/CityDetailpage";
-import Mainlayout from "./components/Mainlayout";
-import BuilderDetailComponent from "./components/BuilderDetailcomponent";
+import { Route, Routes, useLocation } from "react-router-dom";
 
-import {
-  fetchData,
-  // topUpcomingProjects,
-  fetchCategories,
-  allcitiesprojects,
-  brandpartners,
-  // highlightedProjects,
-  getnewsandblogdata,
-  getbloglistdata,
-  getHomeBannerContent,
-  getHomepageBanners,
-  // fetchNewLaunchProjects,
-} from "./apis/callbacks";
+import { allcitiesprojects } from "./apis/callbacks";
 
 import AOS from "aos";
+
 import "aos/dist/aos.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import InnerPageLoader from "./components/InnerPageLoader";
+import Mainlayout from "./components/Mainlayout";
+import Preloader from "./components/Preloader";
+import Aboutuspage from "./pages/Aboutuspage";
+import BlogDetailpage from "./pages/BlogDetailpage";
+import BuilderDetailpage from "./pages/BuilderDetailpage";
+import CityDetailpage from "./pages/CityDetailpage";
+import CommercialProjectspage from "./pages/CommercialProjectspage";
+import Contactuspage from "./pages/Contactuspage";
+import HomeLoanpage from "./pages/HomeLoanpage";
+import Hotprojectspage from "./pages/Hotprojectspage";
+import Plotsprojectspage from "./pages/Plotsprojectspage";
+import Projectlistpage from "./pages/Projectlistpage";
+import PropertyDetailpage from "./pages/PropertyDetailpage";
+import RelatedPostpage from "./pages/RelatedPostpage";
+import Residentialprojectspage from "./pages/Residentialprojectspage";
+import SearchResultsPage from "./pages/SearchResultsPage";
+
 import "swiper/css";
 import "./App.css";
-import Loginpage from "./pages/Loginpage";
-import AdminComponent from "./components/AdminComponent";
-import TermsAndConditionComponent from "./components/TermsAndConditionComponent";
+
 import Desclaimer from "./components/Desclaimer";
-import Devloperlist from "./components/Devloperlist";
+import TermsAndConditionComponent from "./components/TermsAndConditionComponent";
+
 import BuilderlistingPage from "./pages/BuilderlistingPage";
-import NewLaunchcityDynamicPage from "./pages/NewLaunchCitiesvisePage";
-import NewlaunchCityPage from "./components/NewlaunchCityPage";
-import NewLaunchDynamicPage from "./pages/NewLaunchCitiesvisePage";
-import NewLaunchCitiesvisePage from "./pages/NewLaunchCitiesvisePage";
-import Residentailpagecitiesvise from "./pages/Residentailpagecitiesvise";
+
 import CommericialCitievisePage from "./pages/CommericialCitievisePage";
+import NewLaunchCitiesvisePage from "./pages/NewLaunchCitiesvisePage";
 import PlotscitievisePage from "./pages/PlotscitievisePage";
-import ScrollToTop from "./components/ScrollToTop";
-import TopBuilderlistpage from "./pages/TopBuilderlistpage";
+import Residentailpagecitiesvise from "./pages/Residentailpagecitiesvise";
+
 import WebsiteLoginComponent from "./components/WebsiteLoginComponent";
+import TopBuilderlistpage from "./pages/TopBuilderlistpage";
 
 export const CityIdContext = createContext();
 export const CityNameContext = createContext();
 
-const App = () => {
+const App = React.memo(() => {
   const [loading, setLoading] = useState(true);
   const [updating, setUpdating] = useState(false);
   const [apiData, setApiData] = useState({});
@@ -75,6 +54,19 @@ const App = () => {
   const [city, setCity] = useState();
   const location = useLocation();
   const [cities, setCities] = useState([]);
+
+  function loadCSSAsync(href) {
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.href = href;
+    link.as = "style";
+    document.head.appendChild(link);
+  }
+
+  loadCSSAsync("./App.css");
+  loadCSSAsync("aos/dist/aos.css");
+  loadCSSAsync("swiper/css");
+
   useEffect(() => {
     AOS.init();
 
@@ -92,11 +84,24 @@ const App = () => {
   const storeCityName = (city) => {
     try {
       setCity(city);
-      console.log("stored city name", city);
-    } catch (error) {
-      console.log("storing city error", error);
-    }
+    } catch (error) {}
   };
+
+  const cityIdContextValue = React.useMemo(
+    () => ({
+      cityId,
+      storeCityId: (id) => setCityId(id),
+    }),
+    [cityId]
+  );
+
+  const cityNameContextValue = React.useMemo(
+    () => ({
+      city,
+      storeCityName: (cityName) => setCity(cityName),
+    }),
+    [city]
+  );
 
   useEffect(() => {
     const fetchCities = async () => {
@@ -111,8 +116,8 @@ const App = () => {
   }, []);
 
   return (
-    <CityIdContext.Provider value={{ cityId, storeCityId }}>
-      <CityNameContext.Provider value={{ city, storeCityName }}>
+    <CityIdContext.Provider value={cityIdContextValue}>
+      <CityNameContext.Provider value={cityNameContextValue}>
         {/* <ScrollToTop /> */}
         <div className="app-container">
           <Header cityName={city} cities={cities} />
@@ -254,6 +259,6 @@ const App = () => {
       </CityNameContext.Provider>
     </CityIdContext.Provider>
   );
-};
+});
 
 export default App;

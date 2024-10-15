@@ -2,9 +2,7 @@ import { BASE_URL } from "./constatnts";
 
 export const fetchData = async (cityId) => {
   try {
-    const response = await fetch(
-      `${BASE_URL}/combined-projects?city_id=${cityId}`
-    );
+    const response = await fetch(`${BASE_URL}/top-projects?city_id=${cityId}`);
     const data = await response.json();
     return data;
   } catch (error) {
@@ -14,7 +12,9 @@ export const fetchData = async (cityId) => {
 
 export const topUpcomingProjects = async (cityId) => {
   try {
-    const response = await fetch(`${BASE_URL}/top-projects?city_id=${cityId}`);
+    const response = await fetch(
+      `${BASE_URL}/top-launch-projects?city_id=${cityId}`
+    );
     const data = await response.json();
     return data;
   } catch (error) {
@@ -22,13 +22,13 @@ export const topUpcomingProjects = async (cityId) => {
   }
 };
 
-export const highlightedProjects = async (cityId) => {
+export const tophighlightedprojects = async (cityId) => {
   try {
     const response = await fetch(
-      `${BASE_URL}/combined-projects?city_id=${cityId}`
+      `${BASE_URL}/highlighted-projects?city_id=${cityId}`
     );
-    const highlightedProjectsList = await response.json();
-    return highlightedProjectsList;
+    const tophighlightedprojects = await response.json();
+    return tophighlightedprojects;
   } catch (error) {
     console.error("Error fetching highlighted projects:", error);
   }

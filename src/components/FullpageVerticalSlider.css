@@ -331,7 +331,7 @@ button.serch-btn-home {
 .search-box input {
   flex-grow: 1;
   max-width: 461px;
-  height: 53px !important;
+  height: 48px !important;
   margin-left: 0px !important;
   padding: 0px !important;
 }
@@ -383,7 +383,7 @@ button.serch-btn-home {
 .search-box input {
   flex-grow: 1;
   max-width: 461px;
-  height: 53px !important;
+  height: 50px !important;
   margin-left: -25px;
 }
 

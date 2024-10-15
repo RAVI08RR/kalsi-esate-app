@@ -294,7 +294,7 @@ const ProjectReviewslider = ({ highlighteddata }) => {
                             className="amenties-icons highlight-project"
                             alt="bed"
                           />
-                          {project.unit_size}
+                          {project.unit_sizes}
                         </li>
                         <li className="features-list-icons">
                           <img

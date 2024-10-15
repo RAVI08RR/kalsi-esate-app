@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { NavLink, useNavigate } from "react-router-dom";
-import { fetchData } from "../apis/callbacks";
+import "slick-carousel/slick/slick.css";
 import { CityIdContext } from "../App";
 
 // Define the slugify function

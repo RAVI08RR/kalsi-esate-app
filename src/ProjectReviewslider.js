@@ -53,7 +53,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-const ProjectReviewslider = ({ highlighteddata }) => {
+const ProjectReviewslider = React.memo(({ highlighteddata }) => {
   const { cityId } = useContext(CityIdContext);
   const [tophighlightedprojects, setTophighlightedprojects] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -69,6 +69,7 @@ const ProjectReviewslider = ({ highlighteddata }) => {
   };
   const [activeSection, setActiveSection] = useState(null);
   const navigate = useNavigate();
+
   useEffect(() => {
     const fetchTophighlightedprojects = async () => {
       setLoading(true);
@@ -90,6 +91,10 @@ const ProjectReviewslider = ({ highlighteddata }) => {
         setLoading(false);
       }
     };
+    console.log(
+      "tophighlightedprojects unit-size",
+      tophighlightedprojects.unit_sizes
+    );
 
     fetchTophighlightedprojects();
   }, [highlighteddata]);
@@ -171,7 +176,7 @@ const ProjectReviewslider = ({ highlighteddata }) => {
       },
     ],
   };
-
+  console.log("========", tophighlightedprojects[0]);
   return (
     <div className="highlight-pr">
       <div className="project-review-bg-container">
@@ -282,7 +287,7 @@ const ProjectReviewslider = ({ highlighteddata }) => {
                       >
                         <li className="features-list-icons">
                           <img
-                            src="https://d3v1h55v8tucsz.cloudfront.nethttps://d3v1h55v8tucsz.cloudfront.net/assets/images/home-icon.svg"
+                            src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/home-icon.svg"
                             className="amenties-icons highlight-project"
                             alt="project type"
                           />
@@ -294,7 +299,7 @@ const ProjectReviewslider = ({ highlighteddata }) => {
                             className="amenties-icons highlight-project"
                             alt="bed"
                           />
-                          {project.unit_size}
+                          {project?.unit_sizes}
                         </li>
                         <li className="features-list-icons">
                           <img
@@ -343,6 +348,6 @@ const ProjectReviewslider = ({ highlighteddata }) => {
       </div>
     </div>
   );
-};
+});
 
 export default ProjectReviewslider;
