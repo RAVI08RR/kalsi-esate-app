@@ -197,6 +197,7 @@ const ProjectReviewslider = ({ highlighteddata }) => {
                       src={project.image}
                       className="right-side-img-review"
                       alt={project.title}
+                      loading="lazy"
                     />
                   </div>
                   <div className="col-lg-6">
@@ -236,6 +237,7 @@ const ProjectReviewslider = ({ highlighteddata }) => {
                             src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/map-icon.svg"
                             alt="img"
                             className="map-location-icon"
+                            loading="lazy"
                           />
                           {project.address}
                         </li>
@@ -285,6 +287,7 @@ const ProjectReviewslider = ({ highlighteddata }) => {
                             src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/home-icon.svg"
                             className="amenties-icons highlight-project"
                             alt="project type"
+                            loading="lazy"
                           />
                           {project.project_type}
                         </li>
@@ -293,6 +296,7 @@ const ProjectReviewslider = ({ highlighteddata }) => {
                             src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/bed.svg"
                             className="amenties-icons highlight-project"
                             alt="bed"
+                            loading="lazy"
                           />
                           {project.unit_sizes}
                         </li>
@@ -301,6 +305,7 @@ const ProjectReviewslider = ({ highlighteddata }) => {
                             src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/sqft-hi.svg"
                             className="amenties-icons highlight-project"
                             alt="carpet area"
+                            loading="lazy"
                           />
                           {project.carpet_area}
                         </li>

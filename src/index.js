@@ -10,6 +10,8 @@ import "regenerator-runtime/runtime";
 
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import $ from "jquery";
+window.$ = window.jQuery = $;
 
 const App = React.lazy(() => import("./App"));
 // Create a root

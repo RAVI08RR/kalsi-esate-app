@@ -131,6 +131,7 @@ const Footer = ({ cities }) => {
                 className="img-logo-footer"
                 width="200"
                 height="35.103px"
+                loading="lazy"
               />
             </a>
             <div>

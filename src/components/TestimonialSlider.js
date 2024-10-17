@@ -12,7 +12,7 @@ function SampleNextArrow(props) {
       onClick={onClick}
     >
       <img
-        src="https://d3v1h55v8tucsz.cloudfront.net/https://d3v1h55v8tucsz.cloudfront.net/assets/images/next-arrow.svg"
+        src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/next-arrow.svg"
         className="arrow-control"
       />
     </div>
@@ -28,7 +28,7 @@ function SamplePrevArrow(props) {
       onClick={onClick}
     >
       <img
-        src="https://d3v1h55v8tucsz.cloudfront.net/https://d3v1h55v8tucsz.cloudfront.net/assets/images/prev-icon.svg"
+        src="https://d3v1h55v8tucsz.cloudfront.net/assets/images/prev-icon.svg"
         className="arrow-control"
       />
     </div>

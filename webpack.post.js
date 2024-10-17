@@ -56,6 +56,13 @@ module.exports = {
         ],
       },
       {
+        test: /\.(ttf|woff|woff2|eot)$/, // Handling font file types
+        type: "asset/resource", // Outputs fonts to a specific folder
+        generator: {
+          filename: "static/fonts/[name].[contenthash:8][ext]", // Customize font output path
+        },
+      },
+      {
         test: /\.(png|jpg|jpeg|gif|webp)$/i,
         type: "asset/resource",
       },
@@ -92,18 +99,20 @@ module.exports = {
         minifyURLs: true,
       },
       scriptLoading: "defer", // Defer loading of scripts
-      inject: false, // Disable automatic injection of scripts
+      inject: true, // Automatically inject scripts into HTML
     }),
 
     new MiniCssExtractPlugin({
       filename: "static/css/[name].[contenthash:8].css", // Separate CSS files
     }),
+
+    // Critical CSS for faster first paint
     new CriticalCssPlugin({
       base: path.resolve(__dirname, "build"),
       src: "index.html",
       target: "index.html",
-      inline: true, // Inline critical CSS
-      extract: true, // Extract critical CSS
+      inline: true, // Inline critical CSS for faster rendering
+      extract: true, // Extract critical CSS and load the rest later
       width: 375,
       height: 565,
       penthouse: {
