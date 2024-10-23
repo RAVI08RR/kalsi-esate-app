@@ -1,8 +1,7 @@
-const purgecss = require("@fullhuman/postcss-purgecss")({
-  content: ["./src/**/*.html", "./src/**/*.js"], // Your content files
-  defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
-});
-
 module.exports = {
-  plugins: [purgecss],
+  plugins: [
+    require("postcss-preset-env"),
+    require("autoprefixer"),
+    process.env.NODE_ENV === "production" ? require("cssnano") : null,
+  ].filter(Boolean),
 };
